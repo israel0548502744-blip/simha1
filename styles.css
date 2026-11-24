@@ -26,14 +26,12 @@ h1, h2, h3 { margin: 0; }
 
 .label { font: 700 18px/1.5 var(--body); letter-spacing: .1em; color: var(--accent); margin: 0 0 12px; }
 .label.kicker { font: 800 clamp(26px, 2.6vw, 36px)/1.2 var(--body); letter-spacing: .04em; margin: 0 0 10px; display: flex; align-items: center; gap: 14px; }
-.label.kicker::before { content: ""; width: 40px; height: 3px; background: var(--accent); flex: none; }
 /* lecture section opening: centred, no accent line */
 .label.kicker.mid { justify-content: center; text-align: center; }
-.label.kicker.mid::before { display: none; }
 /* "הסיפור שלי": bridges the intro and the story; the quote's line runs down into it */
 #story { padding-top: 0; }
 .label.kicker.bridge { display: block; position: relative; margin: 0 0 6px; padding: 84px 0 0; font: 800 clamp(42px, 4.8vw, 66px)/1.1 var(--body); letter-spacing: .01em; }
-.label.kicker.bridge::before { position: absolute; top: 0; right: 0; width: 3px; height: 66px; background: linear-gradient(var(--accent), rgba(185, 204, 221, .25)); }
+.label.kicker.bridge::before { content: ""; position: absolute; top: 0; right: 0; width: 3px; height: 66px; background: linear-gradient(var(--accent), rgba(185, 204, 221, .25)); }
 .one .wrap > h2, .one .wrap > .sub { text-align: center; margin-inline: auto; }
 .one .tabs { justify-content: center; }
 .btn {
@@ -201,7 +199,8 @@ h1, h2, h3 { margin: 0; }
 .contact { margin-top: 90px; padding: 90px 0 110px; border-top: 1px solid var(--line); }
 .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: start; }
 .direct { list-style: none; margin: 0; padding: 0; }
-.direct a { display: block; padding: 12px 0; border-bottom: 1px solid var(--line); text-decoration: none; font-weight: 600; }
+.direct a { display: flex; align-items: center; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--line); text-decoration: none; font-weight: 600; font-size: 18px; }
+.direct svg { flex: none; width: 22px; height: 22px; fill: none; stroke: var(--accent); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .direct a:hover { color: var(--accent); }
 .contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; background: var(--bg2); border: 1px solid var(--line); padding: clamp(20px, 3vw, 32px); }
 .contact-form > * { min-width: 0; }
