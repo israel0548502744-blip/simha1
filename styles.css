@@ -24,7 +24,7 @@ h1, h2, h3 { margin: 0; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 .wrap { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
 
-.label { font: 600 13px/1.5 var(--body); letter-spacing: .18em; color: var(--accent); margin: 0 0 12px; }
+.label { font: 700 17px/1.5 var(--body); letter-spacing: .12em; color: var(--accent); margin: 0 0 12px; }
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
   padding: 15px 24px; background: var(--text); color: var(--bg);
@@ -113,6 +113,25 @@ h1, h2, h3 { margin: 0; }
 .sec { padding-top: 100px; padding-bottom: 20px; }
 .sec h2, .one h2, .contact h2 { margin: 0 0 14px; font: 700 var(--h2)/.92 var(--disp); }
 .sub { color: var(--muted); margin: 0 0 40px; max-width: 60ch; }
+
+/* ---------- story: wide photo panels ---------- */
+.stations { display: grid; gap: 26px; }
+.st { position: relative; min-height: 540px; display: flex; align-items: center; background: var(--bg2); overflow: hidden; isolation: isolate; }
+.st-img { position: absolute; top: 0; bottom: 0; left: 0; width: 70%; margin: 0; z-index: -1; }
+.st-img img { display: block; width: 100%; height: 100%; object-fit: cover;
+  -webkit-mask-image: linear-gradient(to left, transparent 0, #000 32%); mask-image: linear-gradient(to left, transparent 0, #000 32%); }
+.st-txt { width: min(560px, 50%); padding: 44px 44px 44px 0; }
+.st-k { display: flex; align-items: center; gap: 12px; margin: 0 0 12px; font: 700 19px/1.3 var(--body); letter-spacing: .04em; color: var(--accent); }
+.st-n { flex: none; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--accent); display: grid; place-items: center; font-size: 17px; }
+.st h3 { margin: 0 0 10px; font: 700 clamp(36px, 3.8vw, 52px)/1 var(--disp); }
+.st p { margin: 0 0 12px; color: #c4ccd4; }
+.st p.lead { color: var(--text); font-weight: 700; font-size: 1.08em; margin-bottom: 8px; }
+.st p strong { color: var(--text); font-weight: 800; }
+.st p.big-quote { margin: 2px 0 12px; font: 700 clamp(46px, 4.8vw, 68px)/1 var(--disp); color: var(--accent); }
+.topics { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 16px; }
+.topics b { font-size: 15px; color: var(--text); margin-inline-end: 2px; }
+.topics .chip { margin: 0; background: rgba(185, 204, 221, .08); border-color: rgba(185, 204, 221, .35); }
+.st-cta { margin-top: 20px; }
 
 /* ---------- story timeline ---------- */
 .tl { list-style: none; margin: 0; padding: 0; position: relative; }
@@ -217,6 +236,11 @@ h1, h2, h3 { margin: 0; }
 
   .intro { grid-template-columns: 1fr; gap: 44px; }
   .slideshow { max-width: 520px; margin-inline-end: 18px; }
+  .st { display: block; min-height: 0; }
+  .st-img { position: relative; width: 100%; aspect-ratio: 4 / 3; }
+  .st-img img { -webkit-mask-image: linear-gradient(to top, transparent 0, #000 34%); mask-image: linear-gradient(to top, transparent 0, #000 34%); }
+  .st-txt { position: relative; width: auto; margin-top: -56px; padding: 0 20px 28px; }
+  .stations { gap: 22px; }
   .tl li { grid-template-columns: 40px 1fr; }
   .tl .dot { width: 40px; height: 40px; font-size: 17px; }
   .tl::before { right: 19px; }
