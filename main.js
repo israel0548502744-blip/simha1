@@ -205,8 +205,8 @@ const SITE_CONFIG = {
   /* ---------- CTA buttons that preselect the audience type ---------- */
   $$("[data-audience]").forEach((a) =>
     a.addEventListener("click", () => {
-      const select = $("#f-type");
-      if (select) select.value = a.dataset.audience;
+      const radio = [...document.querySelectorAll('#f-type input[name="type"]')].find((r) => r.value === a.dataset.audience);
+      if (radio) radio.checked = true;
     })
   );
 
