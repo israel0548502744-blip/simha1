@@ -93,6 +93,7 @@ h1, h2, h3 { margin: 0; }
 .tl small { display: block; color: var(--accent); font-weight: 600; letter-spacing: .08em; font-size: 13px; margin-bottom: 4px; }
 .tl h3 { margin: 0 0 6px; font: 700 clamp(32px, 3.4vw, 44px)/1 var(--disp); }
 .tl p { margin: 0 0 10px; color: var(--muted); }
+.tl p strong { color: var(--text); font-weight: 800; }
 .tl p.lead { color: var(--text); font-weight: 700; font-size: 1.08em; margin-bottom: 6px; }
 .tl img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
 .chip { display: inline-block; font-size: 13px; font-weight: 600; border: 1px solid var(--line); padding: 3px 9px; margin: 0 0 4px 6px; color: var(--accent); }
