@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>כיוון 1 · ציר החיים | שמחה לביא</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box} html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font:400 18px/1.7 var(--body);-webkit-font-smoothing:antialiased}
+  img,video{display:block;max-width:100%} a{color:inherit}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 22px}
+  .label{font:600 13px/1 var(--body);letter-spacing:.18em;color:var(--accent);margin:0 0 12px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;background:var(--btn);color:var(--btnText);font:700 16px/1 var(--body);text-decoration:none;border:1.5px solid transparent;border-radius:var(--r,0)}
+  .btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+  .btn:hover{opacity:.88}
+  .alt{text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;opacity:.8}
+  .top{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;max-width:1240px;margin:0 auto}
+  .top .name{font:var(--dw) 26px/1 var(--disp)}
+  .top nav{display:flex;gap:24px;font-weight:600;font-size:15px} .top nav a{text-decoration:none;opacity:.85}
+  .contact{padding:100px 0 120px} .contact h2{margin:0 0 14px;font:var(--dw) var(--h2)/1 var(--disp)}
+  .contact p{max-width:52ch;opacity:.8} .contact .acts{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:24px}
+  footer{text-align:center;font-size:13px;opacity:.6;padding:0 0 84px}
+  [role=tab]{cursor:pointer}
+  .dz{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);z-index:999;display:flex;gap:14px;align-items:center;white-space:nowrap;background:#fff;color:#111;font:500 13px/1 system-ui,sans-serif;padding:10px 16px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.35)}
+  .dz a{color:#111}
+  @media (max-width:900px){.top nav{display:none}}
+
+  :root{--bg:#0F1C27;--bg2:#15283A;--text:#ECEAE4;--muted:#A3B0BC;--accent:#B9CCDD;--line:#ECEAE41f;--btn:#ECEAE4;--btnText:#0F1C27;
+        --disp:"Karantina","Assistant",sans-serif;--dw:700;--body:"Assistant",system-ui,sans-serif;--h2:clamp(54px,7.5vw,104px)}
+  .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;isolation:isolate}
+  .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:55% 40%;z-index:-2}
+  .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 60% 65% at 50% 40%,transparent,rgba(15,28,39,.55) 60%,rgba(15,28,39,.96)),linear-gradient(0deg,var(--bg) 3%,transparent 50%)}
+  .hero .in{padding:0 22px 44px;max-width:1240px;width:100%;margin:0 auto}
+  .hero h1{margin:6px 0 0;font:700 clamp(80px,14vw,210px)/.82 var(--disp)} .hero h1 span{display:block;color:var(--accent)}
+  .hero .row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px;margin-top:22px;border-top:1px solid var(--line);padding-top:18px}
+  .hero .row p{margin:0;max-width:54ch;color:#d5dbe0}
+  .sec{padding:100px 0 20px} .sec h2{margin:0 0 14px;font:700 var(--h2)/.92 var(--disp)} .sec .sub{color:var(--muted);margin:0 0 40px;max-width:60ch}
+  .tl{list-style:none;margin:0;padding:0;position:relative}
+  .tl::before{content:"";position:absolute;top:0;bottom:0;right:23px;width:1px;background:var(--line)}
+  .tl li{display:grid;grid-template-columns:48px 1fr 300px;gap:28px;align-items:center;padding:24px 0}
+  .tl .dot{width:48px;height:48px;border-radius:50%;border:1px solid var(--accent);display:grid;place-items:center;font:700 26px/1 var(--disp);background:var(--bg);color:var(--accent);position:relative}
+  .tl small{display:block;color:var(--accent);font-weight:600;letter-spacing:.08em;font-size:13px;margin-bottom:4px}
+  .tl h3{margin:0 0 6px;font:700 clamp(32px,3.4vw,44px)/1 var(--disp)}
+  .tl p{margin:0 0 10px;color:var(--muted)}
+  .tl img{width:100%;aspect-ratio:16/10;object-fit:cover}
+  .tl li.noimg>div{grid-column:2/4;border-inline-start:3px solid var(--accent);padding-inline-start:20px}
+  .chip{display:inline-block;font-size:13px;font-weight:600;border:1px solid var(--line);padding:3px 9px;margin:0 0 0 6px;color:var(--accent)}
+  .one{margin-top:90px;background:var(--bg2);padding:90px 0}
+  .one h2{margin:0 0 8px;font:700 var(--h2)/.92 var(--disp)} .one .sub{color:var(--muted);margin:0 0 30px;max-width:60ch}
+  .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+  .tabs button{font:600 16px/1 var(--body);color:var(--text);background:transparent;border:1px solid var(--line);padding:13px 18px}
+  .tabs button[aria-selected=true]{background:var(--text);color:var(--bg);border-color:var(--text)}
+  .panel{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;border-top:1px solid var(--line);padding-top:26px}
+  .panel h3{margin:0 0 14px;font:700 clamp(36px,4vw,56px)/.95 var(--disp)}
+  .panel ul{margin:0;padding:0 18px 0 0;color:#d5dbe0} .panel li{margin-bottom:8px}
+  .panel .from{color:var(--muted);font-size:16px} .panel .from b{color:var(--text)}
+  @media (max-width:900px){.tl li{grid-template-columns:40px 1fr}.tl .dot{width:40px;height:40px;font-size:22px}.tl::before{right:19px}.tl img{grid-column:2}.tl li.noimg>div{grid-column:2}.panel{grid-template-columns:1fr;gap:16px}}
+</style>
+</head>
+<body>
+
+<section class="hero"><video autoplay muted loop playsinline poster="../images/hero-lecture-poster.jpg"><source src="../videos/hero-lecture.mp4" type="video/mp4"></video>
+  <div class="top"><div class="name">שמחה לביא</div><nav><a href="#story">הסיפור</a><a href="#lecture">ההרצאה</a><a href="#contact">יצירת קשר</a></nav></div>
+  <div class="in"><p class="label">קצינה לוחמת · יזמית חברתית · מייסדת ONE SHOT</p>
+    <h1>נערה בסיכוי.<span>נגד כל הסיכויים.</span></h1>
+    <div class="row"><p>הרצאה אחת, שבע תחנות בחיים – ומיקוד שמותאם לקהל שלכם: ארגונים, מערכת החינוך, רשויות או נוער.</p><a class="btn" href="#contact">להזמנת ההרצאה</a></div></div>
+</section>
+<main class="wrap">
+  <section class="sec" id="story"><p class="label">הסיפור · לפי הסדר</p><h2>שבע תחנות</h2><p class="sub">כל תחנה בדרך היא גם נושא בהרצאה.</p>
+    <ol class="tl"><li><span class="dot">1</span><div><small>ביתר עילית · גיל 11</small><h3>בגיל 11 יצאתי מהבית.</h3><p>גדלתי בחברה החרדית בביתר עילית. בגיל 11 יצאתי מהבית והתחלתי לחפש מקום שאוכל לקרוא לו בית.</p><span class="chip">צמצום פערים ונוער בסיכון</span></div><img src="../images/haredi-childhood.jpg" alt="שמחה כילדה בכיתה" loading="lazy"></li><li class="noimg"><span class="dot">2</span><div><small>נערה בסיכוי</small><h3>נערה בסיכון? נערה בסיכוי.</h3><p>עברתי בין מסגרות ופנימיות ופגשתי מקרוב נערים ונערות בסיכון. הבנתי שמה שמשנה מסלול הוא קרקע יציבה ומבוגר אחד שמאמין בך.</p><span class="chip">צמצום פערים ונוער בסיכון</span></div></li><li><span class="dot">3</span><div><small>הגיוס</small><h3>בצבא למדתי לראשונה מה זו תקווה.</h3><p>שם גם גיליתי את הפערים החברתיים בישראל – ושאפשר לפעול כדי לצמצם אותם.</p><span class="chip">אחדות בעם ישראל</span><span class="chip">צמצום פערים ונוער בסיכון</span></div><img src="../images/orange-berets-forest.jpg" alt="שמחה עם הפלוגה, כומתות כתומות" loading="lazy"></li><li><span class="dot">4</span><div><small>קצינה לוחמת</small><h3>פיקדתי על אנשים מכל קצוות החברה.</h3><p>יצאתי לקורס קצינים, פיקדתי על חיילים וחיילות והובלתי מבצעים. למדתי שאפשר להגיע מעולמות שונים לחלוטין – ועדיין לעמוד יחד.</p><span class="chip">מנהיגות ופיקוד</span><span class="chip">אחדות בעם ישראל</span></div><img src="../images/officer-salute.jpg" alt="שמחה מצדיעה בטקס" loading="lazy"></li><li><span class="dot">5</span><div><small>הפציעה והצדק המאחה</small><h3>בחרתי לסלוח.</h3><p>נפצעתי קשה במהלך השירות. הובלתי הליך גישור וצדק מאחה מול מי שפגע בי – ולמדתי שאפשר לקום ממשבר בלי לוותר.</p><span class="chip">משבר, סליחה וצדק מאחה</span></div><img src="../images/story-restorative-justice.jpg" alt="שמחה במפגש במסגרת הליך צדק מאחה" loading="lazy"></li><li><span class="dot">6</span><div><small>ONE SHOT</small><h3>מעסק – למיזם חברתי.</h3><p>אחרי השחרור פתחתי את ONE SHOT, והובלתי אותה גם כמיזם חברתי להעלאת מודעות ולמיגור פשיעה בקרב נוער בסיכון.</p><span class="chip">יזמות חברתית בשטח</span><span class="chip">צמצום פערים ונוער בסיכון</span></div><img src="../images/portrait-laptop.jpg" alt="שמחה לביא עם מחשב נייד" loading="lazy"></li><li><span class="dot">7</span><div><small>מנטורינג ו״בוראות מציאות״</small><h3>לתת לנערות מקצוע – ועתיד.</h3><p>מנטורינג לנערות, ו״בוראות מציאות״ – פרויקט שנותן מקצוע לנערות שנשרו מבית הספר, בשיתוף עיריות ומוסדות חינוך.</p><span class="chip">יזמות חברתית בשטח</span><span class="chip">צמצום פערים ונוער בסיכון</span></div><img src="../images/lecture-among-students.jpg" alt="שמחה במפגש עם בני נוער" loading="lazy"></li></ol></section>
+</main>
+<section class="one" id="lecture"><div class="wrap" data-tabs>
+  <p class="label">הרצאה אחת · ארבעה מיקודים</p><h2>נערה בסיכוי. נגד כל הסיכויים.</h2>
+  <p class="sub">הסיפור אותו סיפור – הדגש משתנה לפי מי שיושב באולם. בחרו את הקהל שלכם:</p>
+  <div class="tabs" role="tablist"><button type="button" role="tab" data-tab="org" aria-selected="true">חברות ו-HR</button><button type="button" role="tab" data-tab="edu" aria-selected="false">משרד החינוך, בתי ספר ויועצים</button><button type="button" role="tab" data-tab="gov" aria-selected="false">רשויות ומשרדי ממשלה</button><button type="button" role="tab" data-tab="youth" aria-selected="false">נוער וצעירים</button></div><div class="panel" data-panel="org" ><div><p class="label">המיקוד</p><h3>מנהיגות, חוסן וצוותים מגוונים</h3><p class="from"><b>מתוך הסיפור:</b> קצינה לוחמת · הגיוס · הפציעה והצדק המאחה</p></div><div><p class="label">מה הקהל לוקח</p><ul><li>איך מובילים אנשים שונים זה מזה אל מטרה אחת</li><li>קבלת החלטות בתנאי אי-ודאות</li><li>אחריות, סליחה ותיקון בתוך צוות</li></ul></div></div><div class="panel" data-panel="edu" hidden><div><p class="label">המיקוד</p><h3>לראות את הנער – לפני שרואים את ההתנהגות</h3><p class="from"><b>מתוך הסיפור:</b> ביתר עילית · גיל 11 · נערה בסיכוי · מנטורינג ו״בוראות מציאות״</p></div><div><p class="label">מה הקהל לוקח</p><ul><li>מה הופך מבוגר ל״דמות משמעותית״</li><li>גבולות בלי להקטין</li><li>לזהות פוטנציאל אצל מי שכבר ויתר על עצמו</li></ul></div></div><div class="panel" data-panel="gov" hidden><div><p class="label">המיקוד</p><h3>צמצום פערים ומניעת פשיעה</h3><p class="from"><b>מתוך הסיפור:</b> נערה בסיכוי · ONE SHOT · מנטורינג ו״בוראות מציאות״</p></div><div><p class="label">מה הקהל לוקח</p><ul><li>הנקודות שבהן אפשר לשנות מסלול לנוער בסיכון</li><li>שיתוף פעולה בין רשות, קהילה ומוסדות</li><li>מודלים מהשטח: מנטורינג ו״בוראות מציאות״</li></ul></div></div><div class="panel" data-panel="youth" hidden><div><p class="label">המיקוד</p><h3>נקודת הפתיחה שלך היא לא נקודת הסיום שלך</h3><p class="from"><b>מתוך הסיפור:</b> ביתר עילית · גיל 11 · הגיוס · הפציעה והצדק המאחה</p></div><div><p class="label">מה הקהל לוקח</p><ul><li>הבחירה בידיים שלך – גם כשהסביבה כבר הדביקה תווית</li><li>לקום ממשבר ולא לוותר</li><li>כלים לעצמאות ולמקצוע</li></ul></div></div>
+</div></section>
+<section class="contact wrap" id="contact"><p class="label">יצירת קשר</p><h2>בואו נתאים את ההרצאה לקהל שלכם</h2><p>ספרו לנו מי הקהל ומה המטרה – ונחזור עם הצעה מותאמת.</p><div class="acts"><a class="btn" href="https://wa.me/972538899272" target="_blank" rel="noopener">וואטסאפ · 053-889-9272</a><a class="alt" href="mailto:sisidigital.bh@gmail.com">sisidigital.bh@gmail.com</a></div></section>
+<footer>© שמחה לביא</footer>
+<nav class="dz" aria-label="מעבר בין כיוונים"><a href="lecture-5.html">→ הקודם</a><a href="lecture.html">1/5 · ציר החיים</a><a href="lecture-2.html">הבא ←</a></nav>
+<script>
+document.querySelectorAll("[data-tabs]").forEach(function (g) {
+  var btns = g.querySelectorAll("[data-tab]"), panels = g.querySelectorAll("[data-panel]");
+  btns.forEach(function (b) { b.addEventListener("click", function () {
+    btns.forEach(function (x) { x.setAttribute("aria-selected", String(x === b)); });
+    panels.forEach(function (p) { p.hidden = p.dataset.panel !== b.dataset.tab; });
+  }); });
+});
+</script>
+</body>
+</html>

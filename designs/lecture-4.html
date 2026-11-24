@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>כיוון 4 · דף מרצה | שמחה לביא</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800&family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box} html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font:400 18px/1.7 var(--body);-webkit-font-smoothing:antialiased}
+  img,video{display:block;max-width:100%} a{color:inherit}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 22px}
+  .label{font:600 13px/1 var(--body);letter-spacing:.18em;color:var(--accent);margin:0 0 12px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;background:var(--btn);color:var(--btnText);font:700 16px/1 var(--body);text-decoration:none;border:1.5px solid transparent;border-radius:var(--r,0)}
+  .btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+  .btn:hover{opacity:.88}
+  .alt{text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;opacity:.8}
+  .top{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;max-width:1240px;margin:0 auto}
+  .top .name{font:var(--dw) 26px/1 var(--disp)}
+  .top nav{display:flex;gap:24px;font-weight:600;font-size:15px} .top nav a{text-decoration:none;opacity:.85}
+  .contact{padding:100px 0 120px} .contact h2{margin:0 0 14px;font:var(--dw) var(--h2)/1 var(--disp)}
+  .contact p{max-width:52ch;opacity:.8} .contact .acts{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:24px}
+  footer{text-align:center;font-size:13px;opacity:.6;padding:0 0 84px}
+  [role=tab]{cursor:pointer}
+  .dz{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);z-index:999;display:flex;gap:14px;align-items:center;white-space:nowrap;background:#fff;color:#111;font:500 13px/1 system-ui,sans-serif;padding:10px 16px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.35)}
+  .dz a{color:#111}
+  @media (max-width:900px){.top nav{display:none}}
+
+  :root{--bg:#FFFFFF;--bg2:#F2F4F6;--text:#152331;--muted:#5B6773;--accent:#2E5A7A;--line:#D9DFE4;--btn:#152331;--btnText:#fff;--r:6px;
+        --disp:"Heebo",system-ui,sans-serif;--dw:800;--body:"Assistant",system-ui,sans-serif;--h2:clamp(30px,3.4vw,44px)}
+  .head{background:#152331;color:#fff}
+  .head .top nav a{color:#fff}
+  .hgrid{max-width:1240px;margin:0 auto;padding:30px 22px 60px;display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+  .hgrid h1{margin:8px 0 16px;font:800 clamp(40px,5vw,68px)/1.05 var(--disp);letter-spacing:-.02em} .hgrid h1 span{color:#B9CCDD}
+  .hgrid .label{color:#B9CCDD} .hgrid p{color:#D3DAE0;max-width:52ch}
+  .hgrid video{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px}
+  .hgrid .btn{background:#fff;color:#152331}
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #ffffff2a;border-radius:8px;margin-top:26px}
+  .facts div{padding:14px 14px;border-inline-start:1px solid #ffffff2a} .facts div:first-child{border-inline-start:0}
+  .facts b{display:block;font:700 18px/1.2 var(--disp)} .facts span{font-size:14px;color:#B9C5CF}
+  .sec{padding:70px 0 0} .sec h2{margin:0 0 8px;font:800 var(--h2)/1.15 var(--disp)} .sec .sub{color:var(--muted);margin:0 0 26px;max-width:66ch}
+  .about{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .about p{margin:0}
+  .stops{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 34px}
+  .stops li{padding:14px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:34px 1fr;gap:10px}
+  .stops li::before{counter-increment:s;content:counter(s);font:800 22px/1.2 var(--disp);color:var(--accent)}
+  .stops b{display:block} .stops span{color:var(--muted);font-size:16px}
+  table{width:100%;border-collapse:collapse;font-size:16px;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  th,td{padding:12px 12px;text-align:center;border-bottom:1px solid var(--line)}
+  th{background:var(--bg2);font:700 15px/1.3 var(--disp)} td:first-child,th:first-child{text-align:right}
+  td:first-child{font-weight:600}
+  .dot{display:inline-block;width:14px;height:14px;border-radius:50%;background:var(--accent)}
+  .ring{display:inline-block;width:12px;height:12px;border-radius:50%;border:2px solid #A9B7C3}
+  .legend{font-size:14px;color:var(--muted);margin-top:10px} .legend span{margin-inline-start:16px}
+  .take{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .take div{background:var(--bg2);border-radius:8px;padding:20px}
+  .take h3{margin:0 0 10px;font:700 19px/1.3 var(--disp)} .take ul{margin:0;padding:0 16px 0 0;font-size:16px;color:var(--muted)} .take li{margin-bottom:6px}
+  .contact{border-top:1px solid var(--line);margin-top:80px}
+  @media (max-width:900px){.hgrid,.about{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}.facts div:nth-child(3){border-inline-start:0}.stops{grid-template-columns:1fr}.take{grid-template-columns:1fr}.mx{overflow-x:auto}table{min-width:620px}}
+</style>
+</head>
+<body>
+
+<header class="head">
+  <div class="top"><div class="name">שמחה לביא</div><nav><a href="#about">על ההרצאה</a><a href="#matrix">התאמה לקהל</a><a href="#contact">הזמנה</a></nav></div>
+  <div class="hgrid"><div><p class="label">דף מרצה</p><h1>נערה בסיכוי. <span>נגד כל הסיכויים.</span></h1>
+      <p>הרצאה אחת של שמחה לביא – קצינה לוחמת, יזמית חברתית ומייסדת ONE SHOT – שמותאמת לארגונים, למערכת החינוך, לרשויות ולנוער.</p>
+      <a class="btn" href="#contact">לתיאום הרצאה</a>
+      <div class="facts"><div><b>גיל 11</b><span>יצאה מהבית</span></div><div><b>קצינה לוחמת</b><span>פיקוד ומבצעים</span></div><div><b>צדק מאחה</b><span>גישור מול הפוגע</span></div><div><b>בוראות מציאות</b><span>מקצוע לנערות</span></div></div></div>
+    <video autoplay muted loop playsinline poster="../images/hero-lecture-poster.jpg"><source src="../videos/hero-lecture.mp4" type="video/mp4"></video></div>
+</header>
+<main class="wrap">
+  <section class="sec about" id="about"><div><p class="label">על ההרצאה</p><h2>סיפור אחד, שבע תחנות</h2></div>
+    <p>מנערה שיצאה מהבית בגיל 11, דרך הצבא – שם למדה לראשונה מה זו תקווה – הפציעה וההליך של צדק מאחה, ועד עסק שהפך למיזם חברתי ופרויקטים שנותנים לנערות מקצוע. ההרצאה עוברת בתחנות האלה, והדגש נקבע לפי הקהל.</p></section>
+  <section class="sec"><ol class="stops"><li><div><b>ביתר עילית · גיל 11</b><span>בגיל 11 יצאתי מהבית.</span></div></li><li><div><b>נערה בסיכוי</b><span>נערה בסיכון? נערה בסיכוי.</span></div></li><li><div><b>הגיוס</b><span>בצבא למדתי לראשונה מה זו תקווה.</span></div></li><li><div><b>קצינה לוחמת</b><span>פיקדתי על אנשים מכל קצוות החברה.</span></div></li><li><div><b>הפציעה והצדק המאחה</b><span>בחרתי לסלוח.</span></div></li><li><div><b>ONE SHOT</b><span>מעסק – למיזם חברתי.</span></div></li><li><div><b>מנטורינג ו״בוראות מציאות״</b><span>לתת לנערות מקצוע – ועתיד.</span></div></li></ol></section>
+  <section class="sec" id="matrix"><p class="label">התאמה לקהל</p><h2>מה מודגש לכל קהל</h2><p class="sub">אותה הרצאה – הדגש עובר בין התחנות לפי מי שיושב באולם.</p>
+    <div class="mx"><table><thead><tr><th>תחנה</th><th>חברות ו-HR</th><th>משרד החינוך, בתי ספר ויועצים</th><th>רשויות ומשרדי ממשלה</th><th>נוער וצעירים</th></tr></thead><tbody><tr><td>1. ביתר עילית · גיל 11</td><td></td><td><span class="dot" title="דגש מרכזי"></span></td><td><span class="ring" title="נגיעה"></span></td><td><span class="dot" title="דגש מרכזי"></span></td></tr><tr><td>2. נערה בסיכוי</td><td></td><td><span class="dot" title="דגש מרכזי"></span></td><td><span class="dot" title="דגש מרכזי"></span></td><td><span class="ring" title="נגיעה"></span></td></tr><tr><td>3. הגיוס</td><td><span class="dot" title="דגש מרכזי"></span></td><td><span class="ring" title="נגיעה"></span></td><td><span class="ring" title="נגיעה"></span></td><td><span class="dot" title="דגש מרכזי"></span></td></tr><tr><td>4. קצינה לוחמת</td><td><span class="dot" title="דגש מרכזי"></span></td><td><span class="ring" title="נגיעה"></span></td><td><span class="ring" title="נגיעה"></span></td><td></td></tr><tr><td>5. הפציעה והצדק המאחה</td><td><span class="dot" title="דגש מרכזי"></span></td><td><span class="ring" title="נגיעה"></span></td><td></td><td><span class="dot" title="דגש מרכזי"></span></td></tr><tr><td>6. ONE SHOT</td><td></td><td><span class="ring" title="נגיעה"></span></td><td><span class="dot" title="דגש מרכזי"></span></td><td><span class="ring" title="נגיעה"></span></td></tr><tr><td>7. מנטורינג ו״בוראות מציאות״</td><td></td><td><span class="dot" title="דגש מרכזי"></span></td><td><span class="dot" title="דגש מרכזי"></span></td><td><span class="ring" title="נגיעה"></span></td></tr></tbody></table></div>
+    <p class="legend"><span class="dot"></span> דגש מרכזי <span class="ring"></span> נגיעה</p></section>
+  <section class="sec"><p class="label">מה הקהל לוקח</p><h2>שלוש תובנות לכל קהל</h2><div class="take"><div><h3>חברות ו-HR</h3><ul><li>איך מובילים אנשים שונים זה מזה אל מטרה אחת</li><li>קבלת החלטות בתנאי אי-ודאות</li><li>אחריות, סליחה ותיקון בתוך צוות</li></ul></div><div><h3>משרד החינוך, בתי ספר ויועצים</h3><ul><li>מה הופך מבוגר ל״דמות משמעותית״</li><li>גבולות בלי להקטין</li><li>לזהות פוטנציאל אצל מי שכבר ויתר על עצמו</li></ul></div><div><h3>רשויות ומשרדי ממשלה</h3><ul><li>הנקודות שבהן אפשר לשנות מסלול לנוער בסיכון</li><li>שיתוף פעולה בין רשות, קהילה ומוסדות</li><li>מודלים מהשטח: מנטורינג ו״בוראות מציאות״</li></ul></div><div><h3>נוער וצעירים</h3><ul><li>הבחירה בידיים שלך – גם כשהסביבה כבר הדביקה תווית</li><li>לקום ממשבר ולא לוותר</li><li>כלים לעצמאות ולמקצוע</li></ul></div></div></section>
+</main>
+<section class="contact wrap" id="contact"><p class="label">הזמנה</p><h2>לתיאום הרצאה</h2><p>ספרו לנו מי הקהל, כמה משתתפים ומה המטרה – ונחזור עם הצעה.</p><div class="acts"><a class="btn" href="https://wa.me/972538899272" target="_blank" rel="noopener">וואטסאפ · 053-889-9272</a><a class="alt" href="mailto:sisidigital.bh@gmail.com">sisidigital.bh@gmail.com</a></div></section>
+<footer>© שמחה לביא</footer>
+<nav class="dz" aria-label="מעבר בין כיוונים"><a href="lecture-3.html">→ הקודם</a><a href="lecture.html">4/5 · דף מרצה</a><a href="lecture-5.html">הבא ←</a></nav>
+
+</body>
+</html>

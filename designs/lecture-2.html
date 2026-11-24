@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>כיוון 2 · ארבעה נושאים | שמחה לביא</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;900&family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box} html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font:400 18px/1.7 var(--body);-webkit-font-smoothing:antialiased}
+  img,video{display:block;max-width:100%} a{color:inherit}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 22px}
+  .label{font:600 13px/1 var(--body);letter-spacing:.18em;color:var(--accent);margin:0 0 12px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;background:var(--btn);color:var(--btnText);font:700 16px/1 var(--body);text-decoration:none;border:1.5px solid transparent;border-radius:var(--r,0)}
+  .btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+  .btn:hover{opacity:.88}
+  .alt{text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;opacity:.8}
+  .top{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;max-width:1240px;margin:0 auto}
+  .top .name{font:var(--dw) 26px/1 var(--disp)}
+  .top nav{display:flex;gap:24px;font-weight:600;font-size:15px} .top nav a{text-decoration:none;opacity:.85}
+  .contact{padding:100px 0 120px} .contact h2{margin:0 0 14px;font:var(--dw) var(--h2)/1 var(--disp)}
+  .contact p{max-width:52ch;opacity:.8} .contact .acts{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:24px}
+  footer{text-align:center;font-size:13px;opacity:.6;padding:0 0 84px}
+  [role=tab]{cursor:pointer}
+  .dz{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);z-index:999;display:flex;gap:14px;align-items:center;white-space:nowrap;background:#fff;color:#111;font:500 13px/1 system-ui,sans-serif;padding:10px 16px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.35)}
+  .dz a{color:#111}
+  @media (max-width:900px){.top nav{display:none}}
+
+  :root{--bg:#F4F2ED;--bg2:#FFFFFF;--text:#16222C;--muted:#5A6570;--accent:#2C5878;--line:#16222C22;--btn:#16222C;--btnText:#F4F2ED;
+        --disp:"Frank Ruhl Libre",serif;--dw:900;--body:"Assistant",system-ui,sans-serif;--h2:clamp(40px,5vw,70px)}
+  .hero{position:relative;min-height:92svh;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;isolation:isolate;color:#F4F2ED}
+  .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:55% 40%;z-index:-2}
+  .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(14,22,30,.94),rgba(14,22,30,.5) 45%,rgba(14,22,30,.2) 75%,rgba(14,22,30,.4))}
+  .hero .label{color:#C6D5E2}
+  .hero .in{padding:0 22px 48px;max-width:1240px;width:100%;margin:0 auto}
+  .hero h1{margin:8px 0 18px;font:900 clamp(48px,7vw,104px)/1 var(--disp)} .hero h1 span{color:#C6D5E2}
+  .hero p.l{max-width:56ch;margin:0 0 24px;color:#E1E5E8}
+  .hero .btn{background:#F4F2ED;color:#16222C}
+  .bio{display:grid;grid-template-columns:320px 1fr;gap:50px;align-items:center;padding:90px 0 40px}
+  .bio img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 25%}
+  .bio p{font:500 clamp(20px,2vw,26px)/1.55 var(--disp);margin:0}
+  .bio p b{color:var(--accent)}
+  .sec h2{margin:0 0 30px;font:900 var(--h2)/1.05 var(--disp)}
+  .themes{padding:70px 0 0}
+  .t{display:grid;grid-template-columns:80px 1fr 1fr;gap:30px;padding:34px 0;border-top:1px solid var(--line)}
+  .t:last-child{border-bottom:1px solid var(--line)}
+  .t .n{font:900 56px/.9 var(--disp);color:var(--accent)}
+  .t h3{margin:0 0 8px;font:900 clamp(28px,2.8vw,38px)/1.1 var(--disp)}
+  .t p{margin:0;color:var(--muted)}
+  .t .from{font-size:16px;color:var(--muted);margin-bottom:14px} .t .from b{color:var(--text)}
+  .who{font-size:14px;font-weight:700;letter-spacing:.06em;color:var(--text);margin:0 0 8px}
+  .chip{display:inline-block;font-size:14px;font-weight:600;background:var(--bg2);border:1px solid var(--line);padding:5px 11px;margin:0 0 6px 6px}
+  .one{margin-top:90px;background:#16222C;color:#F4F2ED;padding:90px 0}
+  .one .label{color:#C6D5E2} .one h2{color:#fff}
+  .one .lead{max-width:62ch;color:#D6DCE1;margin:0 0 34px;font-size:19px}
+  .ag{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid #ffffff2a}
+  .ag div{padding:22px 0 0;padding-inline-start:18px;border-inline-start:1px solid #ffffff2a}
+  .ag div:first-child{border-inline-start:0;padding-inline-start:0}
+  .ag h3{margin:0 0 6px;font:900 24px/1.15 var(--disp);color:#fff}
+  .ag p{margin:0 0 10px;color:#C2CBD2;font-size:16px}
+  .ag .k{font-size:14px;color:#C6D5E2}
+  @media (max-width:900px){.bio{grid-template-columns:1fr;gap:24px}.bio img{max-width:320px}.t{grid-template-columns:50px 1fr;gap:12px 14px}.t .n{font-size:40px}.t>div:last-child{grid-column:2}.ag{grid-template-columns:1fr}.ag div{border-inline-start:0;padding-inline-start:0;border-bottom:1px solid #ffffff2a;padding-bottom:18px}}
+</style>
+</head>
+<body>
+
+<section class="hero"><video autoplay muted loop playsinline poster="../images/hero-lecture-poster.jpg"><source src="../videos/hero-lecture.mp4" type="video/mp4"></video>
+  <div class="top"><div class="name">שמחה לביא</div><nav><a href="#themes">הנושאים</a><a href="#lecture">ההרצאה</a><a href="#contact">יצירת קשר</a></nav></div>
+  <div class="in"><p class="label">הרצאה · ארבעה נושאים · ארבעה קהלים</p>
+    <h1>נערה בסיכוי. <span>נגד כל הסיכויים.</span></h1>
+    <p class="l">מביתר עילית, דרך פנימיות וקצונה קרבית, ועד יזמות חברתית ופרויקטים לנערות בסיכון.</p>
+    <a class="btn" href="#contact">להזמנת ההרצאה</a></div>
+</section>
+<main class="wrap">
+  <section class="bio"><img src="../images/portrait-white-chair.jpg" alt="שמחה לביא" loading="lazy">
+    <p>בגיל 11 יצאתי מהבית. הייתי <b>נערה בסיכון</b> – ובחרתי להיות <b>נערה בסיכוי</b>. קצינה לוחמת, פצועה שבחרה בצדק מאחה, יזמית שהפכה עסק למיזם חברתי. היום אני מביאה את הדרך הזאת לבמה – ולשטח.</p></section>
+  <section class="sec themes" id="themes"><p class="label">הנושאים</p><h2>ארבעה נושאים, סיפור אחד</h2><article class="t"><span class="n">01</span><div><h3>אחדות בעם ישראל</h3><p>אחדות היא לא אחידות – לחיות ולעבוד יחד בלי להיות דומים.</p></div><div><p class="from"><b>מתוך הסיפור:</b> הגיוס · קצינה לוחמת</p><p class="who">מתאים במיוחד ל:</p><span class="chip">חברות ו-HR</span><span class="chip">משרד החינוך, בתי ספר ויועצים</span><span class="chip">רשויות ומשרדי ממשלה</span></div></article><article class="t"><span class="n">02</span><div><h3>צמצום פערים ונוער בסיכון</h3><p>מה באמת משנה מסלול לנער או לנערה בקצה – ומה התפקיד של כל אחד מאיתנו.</p></div><div><p class="from"><b>מתוך הסיפור:</b> ביתר עילית · גיל 11 · נערה בסיכוי · הגיוס · ONE SHOT · מנטורינג ו״בוראות מציאות״</p><p class="who">מתאים במיוחד ל:</p><span class="chip">משרד החינוך, בתי ספר ויועצים</span><span class="chip">רשויות ומשרדי ממשלה</span><span class="chip">נוער וצעירים</span></div></article><article class="t"><span class="n">03</span><div><h3>מנהיגות ופיקוד</h3><p>הובלת אנשים שונים זה מזה, החלטות תחת לחץ ואחריות.</p></div><div><p class="from"><b>מתוך הסיפור:</b> קצינה לוחמת</p><p class="who">מתאים במיוחד ל:</p><span class="chip">חברות ו-HR</span></div></article><article class="t"><span class="n">04</span><div><h3>משבר, סליחה וצדק מאחה</h3><p>לקום ממשבר, לקחת אחריות ולבחור בתיקון.</p></div><div><p class="from"><b>מתוך הסיפור:</b> הפציעה והצדק המאחה</p><p class="who">מתאים במיוחד ל:</p><span class="chip">חברות ו-HR</span><span class="chip">משרד החינוך, בתי ספר ויועצים</span><span class="chip">נוער וצעירים</span></div></article></section>
+</main>
+<section class="one sec" id="lecture"><div class="wrap"><p class="label">ההרצאה</p><h2>הרצאה אחת. מותאמת לקהל שלכם.</h2>
+  <p class="lead">לא צריך לבחור בין הרצאות: יש הרצאה אחת – ״נערה בסיכוי. נגד כל הסיכויים.״ – ואנחנו מדגישים בה את הנושאים שהכי רלוונטיים לקהל שלכם.</p>
+  <div class="ag"><div><h3>חברות ו-HR</h3><p>מנהיגות, חוסן וצוותים מגוונים</p><div class="k">דגש: מנהיגות ופיקוד · אחדות בעם ישראל</div></div><div><h3>משרד החינוך, בתי ספר ויועצים</h3><p>לראות את הנער – לפני שרואים את ההתנהגות</p><div class="k">דגש: צמצום פערים ונוער בסיכון · משבר, סליחה וצדק מאחה</div></div><div><h3>רשויות ומשרדי ממשלה</h3><p>צמצום פערים ומניעת פשיעה</p><div class="k">דגש: צמצום פערים ונוער בסיכון · יזמות חברתית בשטח</div></div><div><h3>נוער וצעירים</h3><p>נקודת הפתיחה שלך היא לא נקודת הסיום שלך</p><div class="k">דגש: צמצום פערים ונוער בסיכון · משבר, סליחה וצדק מאחה</div></div></div></div></section>
+<section class="contact wrap" id="contact"><p class="label">יצירת קשר</p><h2>ספרו לנו מי הקהל – ונבנה את ההרצאה</h2><p>הרצאה, מפגש או שיתוף פעולה – נחזור אליכם עם הצעה מותאמת.</p><div class="acts"><a class="btn" href="https://wa.me/972538899272" target="_blank" rel="noopener">וואטסאפ · 053-889-9272</a><a class="alt" href="mailto:sisidigital.bh@gmail.com">sisidigital.bh@gmail.com</a></div></section>
+<footer>© שמחה לביא</footer>
+<nav class="dz" aria-label="מעבר בין כיוונים"><a href="lecture-1.html">→ הקודם</a><a href="lecture.html">2/5 · ארבעה נושאים</a><a href="lecture-3.html">הבא ←</a></nav>
+
+</body>
+</html>
