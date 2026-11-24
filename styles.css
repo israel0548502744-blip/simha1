@@ -66,9 +66,12 @@ h1, h2, h3 { margin: 0; }
 .hero::after { content: ""; position: absolute; inset: 0; z-index: -1;
   background: radial-gradient(ellipse 60% 65% at 50% 40%, transparent, rgba(15, 28, 39, .55) 60%, rgba(15, 28, 39, .96)), linear-gradient(0deg, var(--bg) 3%, transparent 50%); }
 .hero-in { max-width: 1240px; width: 100%; margin: 0 auto; padding: 0 22px 44px; }
-.hero-hi { position: absolute; top: calc(70px + 4vh); left: max(22px, calc((100% - 1240px) / 2 + 22px)); margin: 0;
+.hero-hi { position: absolute; top: calc(70px + 4vh); right: max(22px, calc((100% - 1240px) / 2 + 22px)); margin: 0;
            font: 700 clamp(34px, 3.4vw, 54px)/1 var(--disp); color: var(--text); text-shadow: 0 2px 22px rgba(0,0,0,.6); }
 .hero-hi span { color: var(--accent); }
+/* the greeting replaces the small logo at the top of the page; the logo returns once scrolled */
+.site-header .logo { transition: opacity .3s, visibility .3s; }
+.site-header:not(.scrolled) .logo { opacity: 0; visibility: hidden; }
 .hero .label { font-size: clamp(15px, 1.4vw, 19px); letter-spacing: .04em; color: var(--text); font-weight: 700; }
 .hero .label span { color: var(--accent); }
 .hero .label span { margin: 0 8px; }
