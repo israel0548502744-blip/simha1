@@ -27,6 +27,11 @@ h1, h2, h3 { margin: 0; }
 .label { font: 700 18px/1.5 var(--body); letter-spacing: .1em; color: var(--accent); margin: 0 0 12px; }
 .label.kicker { font: 800 clamp(26px, 2.6vw, 36px)/1.2 var(--body); letter-spacing: .04em; margin: 0 0 10px; display: flex; align-items: center; gap: 14px; }
 .label.kicker::before { content: ""; width: 40px; height: 3px; background: var(--accent); flex: none; }
+/* lecture section opening: centred, no accent line */
+.label.kicker.mid { justify-content: center; text-align: center; }
+.label.kicker.mid::before { display: none; }
+.one .wrap > h2, .one .wrap > .sub { text-align: center; margin-inline: auto; }
+.one .tabs { justify-content: center; }
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
   padding: 15px 24px; background: var(--text); color: var(--bg);
