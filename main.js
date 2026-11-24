@@ -74,9 +74,14 @@ const SITE_CONFIG = {
       });
       panels.forEach((p) => { p.hidden = p.dataset.panel !== tab.dataset.tab; });
     };
+    group.selectTab = select;
     tabs.forEach((t, i) => {
       t.tabIndex = t.getAttribute("aria-selected") === "true" ? 0 : -1;
-      t.addEventListener("click", () => select(t));
+      t.addEventListener("click", () => {
+        select(t);
+        // keep the address shareable: simha1.vercel.app/#hr opens on this audience
+        if (t.dataset.hash) history.replaceState(null, "", "#" + t.dataset.hash);
+      });
       t.addEventListener("keydown", (e) => {
         // RTL: ArrowLeft moves forward
         const step = e.key === "ArrowLeft" ? 1 : e.key === "ArrowRight" ? -1 : 0;
@@ -88,6 +93,35 @@ const SITE_CONFIG = {
       });
     });
   });
+
+  /* ---------- direct link per audience: #hr #edu #gov #youth ---------- */
+  const lecture = $("#lecture [data-tabs]");
+  const audTab = (hash) => lecture && $$("[data-hash]", lecture).find((t) => t.dataset.hash === hash);
+  const openAudience = (hash, behavior) => {
+    const tab = audTab(hash);
+    if (!tab) return false;
+    lecture.selectTab(tab);
+    const box = $(".tabs", lecture);
+    const top = box.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 24;
+    window.scrollTo({ top, behavior });
+    return true;
+  };
+  $$('a[href^="#"]').forEach((a) => {
+    const hash = a.getAttribute("href").slice(1);
+    if (!audTab(hash)) return;
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      history.pushState(null, "", "#" + hash);
+      openAudience(hash, "smooth");
+    });
+  });
+  window.addEventListener("hashchange", () => openAudience(location.hash.slice(1), "smooth"));
+  const startHash = location.hash.slice(1);
+  if (audTab(startHash)) {
+    lecture.selectTab(audTab(startHash));
+    const jump = () => openAudience(startHash, "instant");
+    if (document.readyState === "complete") jump(); else window.addEventListener("load", jump, { once: true });
+  }
 
   /* ---------- buttons that preselect the audience in the form ---------- */
   $$("[data-audience]").forEach((a) =>
