@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>תצוגת פתיחה – עמעום | שמחה לביא</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&family=Assistant:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  .hero-dim { position: absolute; inset: 0; z-index: -1; background: #0F1C27; opacity: 0; transition: opacity .35s; pointer-events: none; }
+  .dimbar { position: fixed; z-index: 70; bottom: calc(12px + env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%);
+            display: flex; align-items: center; gap: 4px; padding: 6px; background: #ECEAE4; color: #0F1C27;
+            box-shadow: 0 8px 28px rgba(0,0,0,.45); max-width: calc(100vw - 20px); overflow-x: auto; }
+  .dimbar b { font: 800 14px/1 var(--body); padding: 0 8px; white-space: nowrap; }
+  .dimbar button { font: 700 14px/1 var(--body); color: #0F1C27; background: transparent; border: 1px solid #0F1C2733; padding: 10px 12px; cursor: pointer; white-space: nowrap; }
+  .dimbar button[aria-pressed="true"] { background: #0F1C27; color: #ECEAE4; border-color: #0F1C27; }
+  .sticky-cta { display: none !important; }
+  .gallery { padding-top: 90px; padding-bottom: 130px; }
+  .gallery h2 { margin: 0 0 10px; font: 700 clamp(44px, 6vw, 80px)/.95 var(--disp); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; }
+  .clip { margin: 0; }
+  .clip video { width: 100%; aspect-ratio: 1; object-fit: cover; background: #15283A; }
+  .clip figcaption { margin-top: 8px; font-size: 15px; line-height: 1.4; }
+  .clip b { display: block; }
+  .clip span { display: block; color: var(--muted); font-size: 13.5px; }
+  .clip .tag { display: inline-block; margin-top: 6px; padding: 3px 8px; border: 1px solid var(--line); color: var(--muted); font-size: 12.5px; font-weight: 700; }
+  .clip .tag.on { border-color: var(--accent); color: var(--accent); }
+  @media (max-width: 640px) { .grid { grid-template-columns: 1fr 1fr; gap: 12px; } .dimbar b { display: none; } .dimbar button { padding: 10px 9px; font-size: 13px; } }
+</style>
+</head>
+<body>
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a href="../#top" class="logo" aria-label="שמחה לביא – לראש העמוד">שמחה לביא</a>
+    <nav class="main-nav" id="main-nav" aria-label="ניווט ראשי">
+      <a href="../#story">הסיפור שלי</a>
+      <a href="../#lecture">הרצאות ומפגשים</a>
+      <a href="../#impact">עשייה חברתית</a>
+      <a href="../#contact" class="btn nav-cta">להזמנת הרצאה / שיתוף פעולה</a>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay" hidden></div>
+    <button type="button" class="menu-toggle" id="menu-toggle" aria-label="פתיחת תפריט" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<main>
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="../images/hero-lecture-poster.jpg" aria-hidden="true">
+    <source src="../videos/hero-lecture.mp4" type="video/mp4">
+  </video>
+  <div class="hero-dim" id="hero-dim" aria-hidden="true"></div>
+  <div class="hero-in">
+    <p class="label">מרצה ויזמית חברתית <span>|</span> חרדית לשעבר <span>|</span> קצינה לוחמת</p>
+    <h1>נערה בסיכוי.<span>נגד כל הסיכונים.</span></h1>
+    <div class="hero-row">
+      <p class="hero-q">מה קורה כשנערה שהוגדרה בסיכון מחליטה שהסיפור שלה לא ייגמר שם?</p>
+      <a class="btn" href="../#contact">להזמנת הרצאה</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTRO ============ -->
+<section class="intro wrap" id="intro">
+  <p class="intro-path">מהילדה מביתר עילית, המגזר החרדי ומשמרת הצניעות, דרך פיקוד כקצינה קרבית בצה״ל, הפציעה והשיקום – ועד ליזמות עסקית וחברתית בשטח.</p>
+  <blockquote class="intro-quote">״כפעילה לצמצום פערים בחברה הישראלית, אני מחברת היום בין כל העולמות עם מטרה אחת ברורה: לייצר פתרונות מעשיים בשטח, לבנות חוסן ולמגר פשיעה בקרב בני נוער. בדרך הזו גיליתי שהריפוי האמיתי מתחיל בעשייה – <strong>אבל הדלק שיניע אותך בכל בוקר מתחיל בזה שפשוט יהיה לך אכפת.</strong>״</blockquote>
+</section>
+<section class="gallery wrap" id="clips">
+  <p class="label">כל הקטעים מהתיקייה</p>
+  <h2>19 קטעים לבחירה</h2>
+  <p class="sub">כל קטע באורך 3 שניות, חתוך כמו שהוא יופיע בפתיחה. רוצים להחליף או להוסיף? כתבו לי את המספרים.</p>
+  <div class="grid">
+<figure class="clip"><video muted loop playsinline preload="none" poster="hero-clips/clip-01.jpg" data-src="hero-clips/clip-01.mp4"></video>
+      <figcaption><b>1. אולם מלא – שמחה על הבמה, המצלמה מתקרבת</b><span>IMG_4962 · שניות 0–3</span></figcaption></figure>
+<figure class="clip"><video muted loop playsinline preload="none" poster="hero-clips/clip-02.jpg" data-src="hero-clips/clip-02.mp4"></video>
+      <figcaption><b>2. על הבמה, מול השקף ״נקודות פתיחה״</b><span>IMG_4962 · שניות 12–15</span></figcaption></figure>
+<figure class="clip"><video muted loop playsinline preload="none" poster="hero-clips/clip-03.jpg" data-src="hero-clips/clip-03.mp4"></video>
+      <figcaption><b>3. קרוב: מדברת אל הקהל</b><span>IMG_4962 · שניות 42–45</span><span class="tag on">קטע 3 בפתיחה</span></figcaption></figure>
+<figure class="clip"><video muted loop playsinline preload="none" poster="hero-clips/clip-04.jpg" data-src="hero-clips/clip-04.mp4"></video>
+      <figcaption><b>4. קרוב מאוד, עם מיקרופון</b><span>IMG_4962 · שניות 96–99</span></figcaption></figure>
+<figure class="clip"><video muted loop playsinline preload="none" poster="hero-clips/clip-05.jpg" data-src="hero-clips/clip-05.mp4"></video>
+      <figcaption><b>5. מול השקף עם תמונת הילדות</b><span>IMG_4964 · שניות 8–11</span></figcaption></figure>
+<figure class="clip"><video muted loop playsinline preload="none" poster="hero-clips/clip-06.jpg" data-src="hero-clips/clip-06.mp4"></video>
+      <figcaption><b>6. שקף תמונת הילדות – רחב יותר</b><span>IMG_4964 · שניות 0–3</span></figcaption></figure>
+<figure class="clip"><video muted loop playsinline preload="none" poster="hero-clips/clip-07.jpg" data-src="hero-clips/clip-07.mp4"></video>
+      <figcaption><b>7. האולם מהצד, עם השקף</b><span>IMG_4965 · שניות 0–3</span></figcaption></figure>
+<figure class="clip"><video muted loop playsinline preload="none" poster="hero-clips/clip-08.jpg" data-src="hero-clips/clip-08.mp4"></video>
+      <figcaption><b>8. מול השקף ״מי אני ללא הסביבה שלי״</b><span>IMG_4966 · שניות 16–19</span><span class="tag">הוסר קודם</span></figcaption></figure>
+<figure class="clip"><video muted loop playsinline preload="none" poster="hero-clips/clip-09.jpg" data-src="hero-clips/clip-09.mp4"></video>
+      <figcaption><b>9. בין התלמידים, מרחוק</b><span>IMG_4967 · שניות 0–3</span></figcaption></figure>
+<figure class="clip"><video muted loop playsinline preload="none" poster="hero-clips/clip-10.jpg" data-src="hero-clips/clip-10.mp4"></video>
+      <figcaption><b>10. בין התלמידים, קרוב</b><span>IMG_4969 · שניות 23–26</span><span class="tag on">חלק מקטע 2 בפתיחה</span></figcaption></figure>
+<figure class="clip"><video muted loop playsinline preload="none" poster="hero-clips/clip-11.jpg" data-src="hero-clips/clip-11.mp4"></video>
+      <figcaption><b>11. קרוב, ליד הווילון</b><span>IMG_4969 · שניות 0–3</span></figcaption></figure>
+<figure class="clip"><video muted loop playsinline preload="none" poster="hero-clips/clip-12.jpg" data-src="hero-clips/clip-12.mp4"></video>
+      <figcaption><b>12. על הבמה, מסבירה בתנועה</b><span>IMG_4969 · שניות 30–33</span><span class="tag on">חלק מקטע 2 בפתיחה</span></figcaption></figure>
+<figure class="clip"><video muted loop playsinline preload="none" poster="hero-clips/clip-13.jpg" data-src="hero-clips/clip-13.mp4"></video>
+      <figcaption><b>13. על הבמה, ליד השקף</b><span>IMG_4969 · שניות 10–13</span></figcaption></figure>
+<figure class="clip"><video muted loop playsinline preload="none" poster="hero-clips/clip-14.jpg" data-src="hero-clips/clip-14.mp4"></video>
+      <figcaption><b>14. האולם מאחור, שקף ״יותר טוב לסלוח״</b><span>IMG_4972 · שניות 0–3</span></figcaption></figure>
+<figure class="clip"><video muted loop playsinline preload="none" poster="hero-clips/clip-15.jpg" data-src="hero-clips/clip-15.mp4"></video>
+      <figcaption><b>15. יושבת מול הקהל, קרוב</b><span>IMG_4972 · שניות 6–9</span></figcaption></figure>
+<figure class="clip"><video muted loop playsinline preload="none" poster="hero-clips/clip-16.jpg" data-src="hero-clips/clip-16.mp4"></video>
+      <figcaption><b>16. האולם המלא מאחור</b><span>IMG_4973 · שניות 0–3</span><span class="tag on">חלק מקטע 1 בפתיחה</span></figcaption></figure>
+<figure class="clip"><video muted loop playsinline preload="none" poster="hero-clips/clip-17.jpg" data-src="hero-clips/clip-17.mp4"></video>
+      <figcaption><b>17. על הבמה, ליד שקף הילדות</b><span>IMG_4973 · שניות 14–17</span></figcaption></figure>
+<figure class="clip"><video muted loop playsinline preload="none" poster="hero-clips/clip-18.jpg" data-src="hero-clips/clip-18.mp4"></video>
+      <figcaption><b>18. האולם מאחור, ״את עושה את זה״</b><span>IMG_4974 · שניות 0–3</span><span class="tag">הוסר קודם</span></figcaption></figure>
+<figure class="clip"><video muted loop playsinline preload="none" poster="hero-clips/clip-19.jpg" data-src="hero-clips/clip-19.mp4"></video>
+      <figcaption><b>19. הקהל נכנס לאולם</b><span>IMG_4975 · שניות 0–3</span></figcaption></figure>
+  </div>
+</section>
+</main>
+<div class="dimbar" role="group" aria-label="רמת עמעום"><b>עמעום הסרטון:</b><button type="button" data-dim="0" aria-pressed="false">כמו היום</button><button type="button" data-dim="1" aria-pressed="false">עמעום קל</button><button type="button" data-dim="2" aria-pressed="false">בינוני</button><button type="button" data-dim="3" aria-pressed="false">חזק</button><button type="button" data-dim="4" aria-pressed="false">חזק מאוד</button></div>
+<script>
+(function () {
+  var LEVELS = {"0": 0, "1": 0.22, "2": 0.38, "3": 0.54, "4": 0.7};
+  var layer = document.getElementById("hero-dim");
+  var btns = Array.prototype.slice.call(document.querySelectorAll("[data-dim]"));
+  function set(k, push) {
+    if (!(k in LEVELS)) k = "0";
+    layer.style.opacity = LEVELS[k];
+    btns.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.dim === k)); });
+    if (push) history.replaceState(null, "", "?dim=" + k + location.hash);
+  }
+  btns.forEach(function (b) { b.addEventListener("click", function () { set(b.dataset.dim, true); }); });
+  set(new URLSearchParams(location.search).get("dim") || "0", false);
+
+  var hv = document.querySelector(".hero-video");
+  if (hv) hv.play().catch(function () {});
+
+  // mobile menu (same behaviour as the site)
+  var toggle = document.getElementById("menu-toggle"), nav = document.getElementById("main-nav"), ov = document.getElementById("nav-overlay");
+  function menu(open) { nav.classList.toggle("open", open); ov.hidden = !open; toggle.setAttribute("aria-expanded", String(open)); }
+  toggle.addEventListener("click", function () { menu(!nav.classList.contains("open")); });
+  ov.addEventListener("click", function () { menu(false); });
+  var header = document.querySelector(".site-header");
+  addEventListener("scroll", function () { header.classList.toggle("scrolled", scrollY > 30); }, { passive: true });
+
+  // play gallery clips only while visible
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      var v = e.target;
+      if (e.isIntersecting) { if (!v.src) v.src = v.dataset.src; v.play().catch(function () {}); }
+      else v.pause();
+    });
+  }, { threshold: .4 });
+  document.querySelectorAll(".clip video").forEach(function (v) { io.observe(v); });
+})();
+</script>
+</body>
+</html>
