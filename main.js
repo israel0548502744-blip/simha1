@@ -1,5 +1,5 @@
 /* ==========================================================
-   SITE CONFIG – contact details
+   SITE CONFIG: contact details
    ========================================================== */
 const SITE_CONFIG = {
   // WhatsApp number in international format, digits only
@@ -147,7 +147,7 @@ const SITE_CONFIG = {
     const text = collect();
     if (!text) return;
     status.textContent = "פותחים את תוכנת המייל...";
-    const subject = encodeURIComponent("הזמנת הרצאה – שמחה לביא");
+    const subject = encodeURIComponent("הזמנת הרצאה | שמחה לביא");
     window.location.href = `mailto:${SITE_CONFIG.email}?subject=${subject}&body=${encodeURIComponent(text)}`;
   });
 })();
