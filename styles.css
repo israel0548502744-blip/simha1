@@ -91,7 +91,9 @@ h1, h2, h3 { margin: 0; }
 @media (min-width: 1024px) { .hero-q { max-width: none; white-space: nowrap; } }
 
 /* ---------- intro (first text after the hero) ---------- */
-.intro { padding-top: 90px; display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); gap: 56px; align-items: end; }
+.intro { padding-top: 64px; display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); gap: 56px; align-items: stretch; }
+.intro-text { display: flex; flex-direction: column; }
+.intro-text .intro-quote { flex: 1; }
 
 /* intro slideshow: slanted wipe + slow push, progress bars */
 .slideshow { position: relative; }
