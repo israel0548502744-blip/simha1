@@ -150,4 +150,49 @@ const SITE_CONFIG = {
     const subject = encodeURIComponent("הזמנת הרצאה | שמחה לביא");
     window.location.href = `mailto:${SITE_CONFIG.email}?subject=${subject}&body=${encodeURIComponent(text)}`;
   });
+  /* ---------- intro slideshow ---------- */
+  const show = $("[data-show]");
+  if (show) {
+    const slides = Array.from(show.querySelectorAll(".slide"));
+    const bars = Array.from(show.querySelectorAll(".show-bar button"));
+    let cur = 0;
+    show.classList.add("is-first");
+    const paint = () => bars.forEach((b, k) => {
+      b.classList.toggle("done", k < cur);
+      b.classList.remove("on");
+      b.toggleAttribute("aria-current", k === cur);
+    });
+    const restartBar = () => { const b = bars[cur]; void b.offsetWidth; b.classList.add("on"); };
+    const go = (n) => {
+      n = (n + slides.length) % slides.length;
+      show.classList.remove("is-first");
+      slides.forEach((s) => s.classList.remove("is-prev"));
+      slides[cur].classList.remove("is-on");
+      if (n !== cur) slides[cur].classList.add("is-prev");
+      const s = slides[n];
+      void s.offsetWidth; // restart the entry animation
+      s.classList.add("is-on");
+      cur = n;
+      paint(); restartBar();
+    };
+    bars.forEach((b, k) => {
+      b.addEventListener("click", () => go(k));
+      b.querySelector("i").addEventListener("animationend", () => { if (b.classList.contains("on")) go(cur + 1); });
+    });
+    // swipe on touch screens
+    let x0 = null;
+    show.addEventListener("touchstart", (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+    show.addEventListener("touchend", (e) => {
+      if (x0 === null) return;
+      const dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 40) go(cur + (dx < 0 ? 1 : -1));
+    });
+    // run only while on screen
+    show.classList.add("paused");
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver((es) => es.forEach((e) => show.classList.toggle("paused", !e.isIntersecting)), { threshold: 0.3 }).observe(show);
+    } else show.classList.remove("paused");
+    paint(); restartBar();
+  }
+
 })();
