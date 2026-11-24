@@ -3,7 +3,7 @@
    ========================================================== */
 const SITE_CONFIG = {
   // WhatsApp number in international format, digits only (e.g. "972501234567")
-  whatsapp: "",
+  whatsapp: "972538899272",
   // Email address for lecture inquiries
   email: "",
   social: {
@@ -25,6 +25,11 @@ const SITE_CONFIG = {
   /* ---------- social links ---------- */
   $$("[data-social]").forEach((a) => {
     const key = a.dataset.social;
+    if (key === "whatsapp") {
+      if (SITE_CONFIG.whatsapp) a.href = `https://wa.me/${SITE_CONFIG.whatsapp}`;
+      else a.closest("li").hidden = true;
+      return;
+    }
     if (key === "email") {
       if (SITE_CONFIG.email) a.href = `mailto:${SITE_CONFIG.email}`;
       a.removeAttribute("target");
