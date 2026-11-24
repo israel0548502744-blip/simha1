@@ -2,13 +2,14 @@
 
 אתר סטטי בעברית (RTL) להזמנת הרצאות של שמחה לביא. ללא build.
 
-- `site/` – האתר (`index.html`, `styles.css`, `main.js`, תמונות וסרטונים)
+האתר יושב בתיקייה הראשית של הריפו (`index.html`, `styles.css`, `main.js`, `images/`, `videos/`).
+מתפרסם אוטומטית בוורסל בכל עדכון לענף `main`.
 
 ## הרצה מקומית
 
-    npx serve site      # או: cd site && python3 -m http.server
+    npx serve .      # או: python3 -m http.server
 
 ## לפני עלייה לאוויר
 
-מלאו את `SITE_CONFIG` בראש `site/main.js` (מספר וואטסאפ, מייל, קישורי טיקטוק ויוטיוב),
-והחליפו את הסרטון בכפתור "טעימה מההרצאה" ב-`site/index.html` (`data-video`) אם צריך.
+מלאו את `SITE_CONFIG` בראש `main.js` (מספר וואטסאפ, מייל, קישורי טיקטוק ויוטיוב),
+והחליפו את הסרטון בכפתור "טעימה מההרצאה" ב-`index.html` (`data-video`) אם צריך.
