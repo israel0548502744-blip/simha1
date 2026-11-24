@@ -5,7 +5,7 @@ const SITE_CONFIG = {
   // WhatsApp number in international format, digits only (e.g. "972501234567")
   whatsapp: "972538899272",
   // Email address for lecture inquiries
-  email: "",
+  email: "sisidigital.bh@gmail.com",
   social: {
     instagram: "https://www.instagram.com/simcha_lavii/",
     tiktok: "",   // e.g. "https://www.tiktok.com/@..."
@@ -92,10 +92,11 @@ const SITE_CONFIG = {
     { rootMargin: "-45% 0px -50% 0px" }
   );
   sections.forEach((s) => spy.observe(s));
+  spy.observe(hero); // over the hero no section link is highlighted
 
   /* ---------- reveal on scroll ---------- */
   const revealTargets = $$(
-    ".panel, .chapter, .mini-chapter, .audience-grid li, .g-item, .contact-copy, .contact-form, .section-head"
+    ".panel, .chapter, .mini-chapter, .audience-grid li, .lecture-card, .impact-text, .impact-photo, .g-item, .contact-copy, .contact-form, .section-head"
   );
   revealTargets.forEach((el) => el.classList.add("reveal"));
   const revealer = new IntersectionObserver(
@@ -192,6 +193,14 @@ const SITE_CONFIG = {
     })
   );
 
+  /* ---------- CTA buttons that preselect the audience type ---------- */
+  $$("[data-audience]").forEach((a) =>
+    a.addEventListener("click", () => {
+      const select = $("#f-type");
+      if (select) select.value = a.dataset.audience;
+    })
+  );
+
   /* ---------- contact form ---------- */
   const form = $("#contact-form");
   const status = $("#form-status");
@@ -222,8 +231,16 @@ const SITE_CONFIG = {
     const d = Object.fromEntries(new FormData(form).entries());
     const nameBad = !String(d.name || "").trim();
     const phoneBad = String(d.phone || "").replace(/\D/g, "").length < 9;
+    const email = String(d.email || "").trim();
+    const emailBad = !!email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    form.elements.email.closest(".field").classList.toggle("invalid", emailBad);
     form.elements.name.closest(".field").classList.toggle("invalid", nameBad);
     form.elements.phone.closest(".field").classList.toggle("invalid", phoneBad);
+    if (!nameBad && !phoneBad && emailBad) {
+      status.textContent = "נראה שכתובת הדוא״ל לא תקינה.";
+      form.elements.email.focus();
+      return null;
+    }
     if (nameBad || phoneBad) {
       status.textContent = nameBad
         ? "נא למלא שם וטלפון כדי שנוכל לחזור אליכם."
@@ -234,12 +251,14 @@ const SITE_CONFIG = {
     const lines = [
       "היי שמחה, אשמח לפרטים על הרצאה 🙂",
       `שם: ${d.name}`,
+      d.org && `ארגון / חברה: ${d.org}`,
+      d.role && `תפקיד: ${d.role}`,
       `טלפון: ${d.phone}`,
-      d.org && `מוסד / ארגון: ${d.org}`,
-      d.type && `סוג ההרצאה: ${d.type}`,
-      d.date && `תאריך משוער: ${d.date}`,
-      d.size && `מספר משתתפים: ${d.size}`,
-      d.message && `פרטים: ${d.message}`,
+      d.email && `דוא״ל: ${d.email}`,
+      d.type && `סוג הקהל: ${d.type}`,
+      d.size && `מספר משתתפים משוער: ${d.size}`,
+      d.date && `מועד מבוקש: ${d.date}`,
+      d.message && `פרטים נוספים: ${d.message}`,
     ].filter(Boolean);
     return lines.join("\n");
   };
