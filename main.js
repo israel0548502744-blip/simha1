@@ -105,7 +105,7 @@ const SITE_CONFIG = {
 
   /* ---------- reveal on scroll ---------- */
   const revealTargets = $$(
-    ".section-head, .story-step, .motto-inner, .today-card, .lecture, .impact-item, .impact-photos, .oneshot-inner, .contact-copy, .contact-form"
+    ".panel, .chapter, .mini-chapter, .audience-grid li, .lecture-card, .impact-text, .impact-photo, .g-item, .contact-copy, .contact-form, .section-head"
   );
   revealTargets.forEach((el) => el.classList.add("reveal"));
   const revealer = new IntersectionObserver(
@@ -199,21 +199,6 @@ const SITE_CONFIG = {
         node.playsInline = true;
       }
       openModal(node);
-    })
-  );
-
-  /* ---------- lecture filter by audience ---------- */
-  const filters = $$(".filter");
-  const lectures = $$(".lecture");
-  filters.forEach((btn) =>
-    btn.addEventListener("click", () => {
-      const key = btn.dataset.filter;
-      filters.forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
-      lectures.forEach((card) => {
-        const show = key === "all" || card.dataset.aud.split(" ").includes(key);
-        card.hidden = !show;
-        if (show) card.classList.add("in"); // never leave a filtered-in card invisible
-      });
     })
   );
 
