@@ -167,6 +167,7 @@ h1, h2, h3 { margin: 0; }
 .take { margin: 0 0 14px; font: 800 clamp(19px, 1.6vw, 22px)/1.45 var(--body); color: var(--text); }
 .panel ul { margin: 0; padding: 0 20px 0 0; color: #d5dbe0; font-size: clamp(18px, 1.5vw, 20px); }
 .panel li { margin-bottom: 10px; }
+.panel li strong { font-weight: 800; color: var(--accent); }
 .from { color: #b6c0ca; font-size: 18px; margin: 0 0 22px; }
 .from b { color: var(--text); }
 
