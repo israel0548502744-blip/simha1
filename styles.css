@@ -541,5 +541,5 @@ button.btn-ghost { font-family: var(--sans); }
 @media (max-width: 640px) {
   /* keep the speaker visible above the headline on phones */
   .hero-bg { height: calc(46vh + 40px); -webkit-mask-image: linear-gradient(180deg, #000 72%, transparent); mask-image: linear-gradient(180deg, #000 72%, transparent); }
-  .hero-video { object-position: 50% 62%; }
+  .hero-video { object-position: 50% 50%; }
 }
