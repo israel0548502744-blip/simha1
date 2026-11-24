@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>במה 2 · אור | שמחה לביא</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--bg); color:var(--text); font:400 18px/1.7 var(--body); -webkit-font-smoothing:antialiased; }
+  img, video { display:block; max-width:100%; }
+  a { color:inherit; }
+  .wrap { max-width:1200px; margin:0 auto; padding:0 22px; }
+  .disp { font-family:var(--disp); font-weight:var(--dispW); }
+  .label { font-weight:600; letter-spacing:.2em; font-size:13px; color:var(--accent); margin:0 0 10px; }
+  .btn { display:inline-flex; align-items:center; gap:12px; padding:15px 26px; background:var(--btn); color:var(--btnText); font:700 16px/1 var(--body); text-decoration:none; border:1.5px solid transparent; }
+  .btn.ghost { background:transparent; color:var(--text); border-color:var(--line); }
+  .btn:hover { opacity:.88; }
+
+  /* hero */
+  .hero { position:relative; min-height:100svh; overflow:hidden; display:flex; flex-direction:column; justify-content:space-between; isolation:isolate; }
+  .hero video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:55% 40%; z-index:-2; }
+  .hero::after { content:""; position:absolute; inset:0; z-index:-1; }
+  .top { display:flex; justify-content:space-between; align-items:center; padding:20px 22px; }
+  .top .name { font:var(--dispW) 30px/1 var(--disp); }
+  .top nav { display:flex; gap:26px; font-weight:600; font-size:15px; }
+  .top nav a { text-decoration:none; opacity:.85; }
+  .top nav a:hover { opacity:1; }
+  .marquee { padding:0 22px 44px; max-width:1200px; width:100%; margin:0 auto; }
+  .pre { font-weight:600; letter-spacing:.2em; font-size:13px; color:var(--accent); }
+  .hero h1 { margin:8px 0 0; font:var(--dispW) var(--h1)/var(--h1lh) var(--disp); }
+  .hero h1 span { display:block; color:var(--accent); }
+  .row { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:22px; margin-top:24px; border-top:1px solid var(--line); padding-top:20px; }
+  .lead { margin:0; max-width:54ch; color:var(--muted); }
+  .hero .lead { color:inherit; opacity:.88; }
+  .actions { display:flex; flex-wrap:wrap; gap:12px; }
+
+  /* intro */
+  .intro { display:grid; grid-template-columns:1fr 1.25fr; gap:56px; align-items:center; padding:110px 0 80px; }
+  .intro img { width:100%; aspect-ratio:4/5; object-fit:cover; object-position:50% 25%; }
+  .intro h2 { margin:0 0 18px; font:var(--dispW) var(--h3)/1.05 var(--disp); }
+  .intro p { color:var(--muted); margin:0 0 12px; }
+  .facts { list-style:none; margin:24px 0 0; padding:0; display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line); }
+  .facts li { padding:14px 12px 0 0; }
+  .facts b { display:block; font:var(--dispW) 26px/1.1 var(--disp); }
+  .facts span { font-size:14px; color:var(--muted); }
+
+  /* themes */
+  .themes h2, .aud h2, .contact h2, .oneshot h2 { margin:0 0 34px; font:var(--dispW) var(--h2)/.95 var(--disp); }
+  .themes .sub { margin:-18px 0 30px; color:var(--muted); max-width:60ch; }
+  .theme { display:grid; grid-template-columns:110px 1fr 380px; gap:34px; align-items:center; padding:30px 0; border-top:1px solid var(--line); }
+  .theme:last-child { border-bottom:1px solid var(--line); }
+  .theme .n { font:var(--dispW) 64px/.8 var(--disp); color:var(--accent); }
+  .theme h3 { margin:0 0 8px; font:var(--dispW) var(--h3)/1 var(--disp); }
+  .theme p { margin:0; color:var(--muted); max-width:58ch; }
+  .theme img { width:100%; aspect-ratio:16/10; object-fit:cover; filter:saturate(.85); }
+
+  /* audiences */
+  .aud { padding:110px 0 30px; }
+  .aud .sub { margin:-18px 0 30px; color:var(--muted); max-width:62ch; }
+  .aud-grid { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line); }
+  .aud-grid > div { padding:22px 20px 26px 0; padding-inline-end:20px; border-inline-start:1px solid var(--line); padding-inline-start:20px; }
+  .aud-grid > div:first-child { border-inline-start:0; padding-inline-start:0; }
+  .aud-grid h3 { margin:0 0 8px; font:var(--dispW) 28px/1.1 var(--disp); }
+  .aud-grid p { margin:0 0 14px; color:var(--muted); font-size:16px; }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; }
+  .chips span { font-size:13px; font-weight:600; border:1px solid var(--line); padding:4px 9px; }
+  .chips span b { color:var(--accent); }
+
+  /* one shot */
+  .oneshot { margin-top:100px; background:var(--bg2); }
+  .oneshot .wrap { display:grid; grid-template-columns:1.3fr 1fr; gap:50px; align-items:center; padding-top:80px; padding-bottom:80px; }
+  .oneshot p { color:var(--muted); margin:0 0 20px; }
+  .oneshot img { width:100%; aspect-ratio:1; object-fit:cover; object-position:50% 25%; }
+
+  /* contact */
+  .contact { padding:110px 0 120px; }
+  .contact p { color:var(--muted); max-width:52ch; }
+  .contact .actions { margin-top:26px; align-items:center; }
+  .contact .alt { text-decoration:none; border-bottom:1px solid var(--muted); padding-bottom:2px; }
+  footer { color:var(--muted); font-size:13px; text-align:center; padding:0 0 80px; }
+
+  @media (max-width: 900px) {
+    .top nav { display:none; }
+    .intro { grid-template-columns:1fr; gap:26px; padding:70px 0 40px; }
+    .intro img { aspect-ratio:1; }
+    .facts { grid-template-columns:1fr 1fr; }
+    .theme { grid-template-columns:56px 1fr; gap:14px 16px; }
+    .theme .n { font-size:42px; }
+    .theme img { grid-column:1 / -1; order:-1; }
+    .aud-grid { grid-template-columns:1fr; }
+    .aud-grid > div, .aud-grid > div:first-child { border-inline-start:0; padding-inline-start:0; border-bottom:1px solid var(--line); }
+    .oneshot .wrap { grid-template-columns:1fr; }
+    .row .actions { width:100%; }
+    .row .btn { flex:1 1 auto; justify-content:center; }
+  }
+
+  .dz { position:fixed; bottom:12px; left:50%; transform:translateX(-50%); z-index:999; display:flex; gap:14px; align-items:center; white-space:nowrap; background:#ffffff; color:#111; font:500 13px/1 system-ui, sans-serif; padding:10px 16px; border-radius:999px; box-shadow:0 4px 16px rgba(0,0,0,.35); }
+  .dz a { color:#111; }
+
+  :root { --bg:#F3F1EC; --bg2:#FFFFFF; --text:#16222C; --muted:#5B6570; --accent:#2C5878; --line:#16222C1f; --btn:#16222C; --btnText:#F3F1EC;
+          --disp:"Frank Ruhl Libre",serif; --dispW:900; --body:"Assistant",system-ui,sans-serif; --h1:clamp(52px,7.6vw,112px); --h1lh:1; --h2:clamp(40px,5vw,72px); --h3:clamp(26px,2.4vw,34px); }
+  .hero { color:#F3F1EC; }
+  .hero .top .name, .hero .top nav a { color:#F3F1EC; }
+  .hero::after { background: linear-gradient(0deg, rgba(14,22,30,.92) 0%, rgba(14,22,30,.55) 42%, rgba(14,22,30,.15) 75%, rgba(14,22,30,.35) 100%); }
+  .hero .pre { color:#C7D6E3; }
+  .hero h1 span { color:#C7D6E3; }
+  .hero .lead { color:#E3E6E8; }
+  .hero .btn { background:#F3F1EC; color:#16222C; }
+  .hero .btn.ghost { background:transparent; color:#F3F1EC; border-color:#F3F1EC80; }
+  .theme img { filter:none; }
+</style>
+</head>
+<body>
+<section class="hero">
+  <video autoplay muted loop playsinline poster="../images/hero-lecture-poster.jpg"><source src="../videos/hero-lecture.mp4" type="video/mp4"></video>
+  <div class="top"><div class="name">שמחה לביא</div><nav><a href="#about">עליי</a><a href="#themes">הנושאים</a><a href="#audiences">לקהלים</a><a href="#oneshot">ONE SHOT</a><a href="#contact">יצירת קשר</a></nav></div>
+  <div class="marquee">
+    <div class="pre">קצינה לוחמת · יזמית חברתית · מייסדת ONE SHOT</div>
+    <h1>נערה בסיכוי.<span>נגד כל הסיכויים.</span></h1>
+    <div class="row">
+      <p class="lead">מביתר עילית, דרך פנימייה וקצונה קרבית, ועד יזמות חברתית. הרצאות ושיתופי פעולה לארגונים, רשויות ומוסדות חינוך – על אחדות, צמצום פערים, מנהיגות ותיקון.</p>
+      <div class="actions"><a class="btn" href="#contact">להזמנת הרצאה</a><a class="btn ghost" href="#themes">הנושאים שלי</a></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+  <section class="intro" id="about">
+    <img src="../images/portrait-white-chair.jpg" alt="שמחה לביא" loading="lazy">
+    <div>
+      <p class="label">עליי</p>
+      <h2>לא תמיד ידעתי לאן אני הולכת. ידעתי שאני לא מוכנה להפסיק ללכת.</h2>
+      <p>גדלתי בחברה החרדית, ובגיל 11 עזבתי את הבית. עברתי בין מסגרות, התגייסתי, הפכתי לקצינה לוחמת, נפצעתי – ובחרתי בתיקון.</p>
+      <p>היום אני מחברת בין עולמות, אנשים והזדמנויות, ופועלת לצמצום פערים בחברה הישראלית.</p>
+      <ul class="facts">
+        <li><b>גיל 11</b><span>עזבה את הבית</span></li>
+        <li><b>קצינה לוחמת</b><span>פיקוד על חיילים וחיילות</span></li>
+        <li><b>צדק מאחה</b><span>הובילה הליך תיקון</span></li>
+        <li><b>ONE SHOT</b><span>מייסדת</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="themes" id="themes">
+    <p class="label">חמישה נושאים · סיפור אחד</p>
+    <h2>על מה אני מדברת</h2>
+    <p class="sub">כל מפגש נבנה מתוך הנושאים האלה – בהתאם לקהל ולמטרה שלכם.</p>
+    <article class="theme"><span class="n">01</span><div><h3>אחדות בעם ישראל</h3><p>פיקדתי על חיילים וחיילות מכל קצוות החברה הישראלית, ולמדתי שאפשר להגיע מעולמות שונים לחלוטין ועדיין לעמוד יחד. אחדות היא לא אחידות.</p></div><img src="../images/haredi-hug.jpg" alt="שמחה במדי קצינה מחבקת אדם חרדי" loading="lazy"></article>
+    <article class="theme"><span class="n">02</span><div><h3>צמצום פערים בחברה הישראלית</h3><p>עזבתי את הבית בביתר עילית בגיל 11 ועברתי בין מסגרות. אני מכירה מבפנים את הפער בין נוער בקצה לבין הזדמנויות – ופועלת כדי לסגור אותו.</p></div><img src="../images/haredi-childhood.jpg" alt="שמחה כילדה בכיתה" loading="lazy"></article>
+    <article class="theme"><span class="n">03</span><div><h3>יזמות ופרויקטים בשטח</h3><p>הקמתי את ONE SHOT ואני מובילה תוכניות לנוער וצעירים – דיגיטל, תוכן ועצמאות – כלים אמיתיים לעתיד.</p></div><img src="../images/portrait-laptop.jpg" alt="שמחה לביא עם מחשב נייד" loading="lazy"></article>
+    <article class="theme"><span class="n">04</span><div><h3>צה״ל – שירות כקצינה לוחמת</h3><p>התגייסתי כלוחמת, יצאתי לקורס קצינים, פיקדתי על חיילים וחיילות והובלתי מבצעים. מנהיגות, החלטות תחת לחץ ואחריות על אנשים.</p></div><img src="../images/officer-salute.jpg" alt="שמחה מצדיעה בטקס" loading="lazy"></article>
+    <article class="theme"><span class="n">05</span><div><h3>הפציעה וצדק מאחה</h3><p>נפצעתי קשה במהלך השירות, ובחרתי להוביל הליך של צדק מאחה מול האדם שפגע בי. על אחריות, סליחה ותיקון.</p></div><img src="../images/story-restorative-justice.jpg" alt="שמחה במפגש במסגרת הליך צדק מאחה" loading="lazy"></article>
+  </section>
+
+  <section class="aud" id="audiences">
+    <p class="label">לקהלים</p>
+    <h2>הרצאה שנבנית בשבילכם</h2>
+    <p class="sub">בוחרים קהל – ואנחנו מדגישים את הנושאים שהכי רלוונטיים לו.</p>
+    <div class="aud-grid">
+      <div><h3>חברות ו-HR</h3><p>מנהיגות בתנאי אי-ודאות, צוותים מגוונים וחוסן.</p><div class="chips"><span><b>04</b> צה״ל</span><span><b>01</b> אחדות בעם ישראל</span><span><b>05</b> הפציעה וצדק מאחה</span></div></div>
+      <div><h3>מערכת החינוך ויועצים</h3><p>לראות את הנער – לפני שרואים את ההתנהגות.</p><div class="chips"><span><b>02</b> צמצום פערים בחברה הישראלית</span><span><b>05</b> הפציעה וצדק מאחה</span><span><b>01</b> אחדות בעם ישראל</span></div></div>
+      <div><h3>רשויות ומשרדי ממשלה</h3><p>צמצום פערים, נוער בסיכון ומניעת פשיעה.</p><div class="chips"><span><b>02</b> צמצום פערים בחברה הישראלית</span><span><b>03</b> יזמות ופרויקטים בשטח</span><span><b>01</b> אחדות בעם ישראל</span></div></div>
+      <div><h3>נוער וצעירים</h3><p>נקודת הפתיחה שלך היא לא נקודת הסיום שלך.</p><div class="chips"><span><b>02</b> צמצום פערים בחברה הישראלית</span><span><b>03</b> יזמות ופרויקטים בשטח</span><span><b>04</b> צה״ל</span></div></div>
+    </div>
+  </section>
+</main>
+
+<section class="oneshot" id="oneshot"><div class="wrap">
+  <div><p class="label">ONE SHOT</p><h2>כשהתוכן פוגש מטרה</h2><p>החברה שהקמתי – אסטרטגיה, קריאייטיב, תוכן ושיווק דיגיטלי. את הכלים האלה אני מנתבת גם לקידום מטרות חברתיות.</p><a class="btn ghost" href="#contact">להיכרות עם ONE SHOT</a></div>
+  <img src="../images/portrait-laptop-chair.jpg" alt="שמחה לביא, מייסדת ONE SHOT" loading="lazy">
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <p class="label">יצירת קשר</p>
+  <h2>בואו נבנה את המפגש הבא שלכם</h2>
+  <p>ספרו לנו מי הקהל ומה המטרה – ונחזור אליכם עם הצעה מותאמת.</p>
+  <div class="actions"><a class="btn" href="https://wa.me/972538899272" target="_blank" rel="noopener">וואטסאפ · 053-889-9272</a><a class="alt" href="mailto:sisidigital.bh@gmail.com">sisidigital.bh@gmail.com</a></div>
+</div></section>
+<footer>© שמחה לביא</footer>
+<nav class="dz" aria-label="מעבר בין אפשרויות"><a href="stage-1.html">→ הקודם</a><span>במה 2/3 · אור</span><a href="stage-3.html">הבא ←</a></nav>
+</body>
+</html>
