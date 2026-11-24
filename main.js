@@ -19,6 +19,15 @@ const SITE_CONFIG = {
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
+  /* ---------- hero video: skip on data-saver / reduced motion (poster stays) ---------- */
+  const heroVideo = $(".hero-video");
+  if (heroVideo) {
+    const saveData = navigator.connection && navigator.connection.saveData;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (saveData || reduceMotion) heroVideo.remove();
+    else heroVideo.play().catch(() => {}); // some browsers need an explicit play() for muted autoplay
+  }
+
   /* ---------- year ---------- */
   $("#year").textContent = new Date().getFullYear();
 
