@@ -130,6 +130,8 @@ h1, h2, h3 { margin: 0; }
 .watch { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; font-weight: 700; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 2px; }
 .watch svg { width: 22px; height: 22px; padding: 4px; border-radius: 50%; background: var(--accent); fill: var(--bg); transform: scaleX(-1); }
 .watch:hover { color: var(--accent); }
+.nw { white-space: nowrap; }
+.watch-row { display: flex; flex-wrap: wrap; gap: 6px 22px; }
 
 /* ---------- one lecture, four focuses ---------- */
 .one { margin-top: 90px; background: var(--bg2); padding: 90px 0; }
