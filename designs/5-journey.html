@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>אפשרות 5 · מכאן לכאן | שמחה לביא</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@500;700&family=Alef:wght@400;700&family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#f8f4ec; --ink:#1f3350; --text:#2a2a2a; --pencil:#77736b; --tape:#e8d9a8cc; --red:#b8432f; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--text); font:400 18px/1.75 "Alef", system-ui, sans-serif; }
+  img, video { display:block; max-width:100%; }
+  a { color:inherit; }
+  .wrap { max-width:1100px; margin:0 auto; padding:0 22px; }
+  .hand { font-family:"Amatic SC", cursive; font-weight:700; color:var(--ink); }
+
+  header .wrap { display:flex; justify-content:space-between; align-items:center; padding-top:22px; padding-bottom:10px; }
+  .logo { font:700 24px/1 "David Libre", serif; color:var(--ink); }
+  header nav { display:flex; gap:22px; font-size:15px; }
+  header nav a { text-decoration:none; }
+  header nav a:hover { color:var(--red); }
+
+  /* hero: from here to here */
+  .hero { padding:36px 0 30px; }
+  .hero h1 { margin:0; font:700 clamp(46px, 7.4vw, 96px)/1 "David Libre", serif; color:var(--ink); }
+  .hero .slogan { margin:10px 0 0; font:700 clamp(30px, 4.6vw, 56px)/1 "Amatic SC"; color:var(--red); }
+  .pair { display:grid; grid-template-columns: 1fr 150px 1.6fr; align-items:center; margin-top:34px; }
+  .snap { position:relative; background:#fff; padding:12px 12px 46px; box-shadow:0 1px 2px rgba(0,0,0,.12), 0 10px 24px rgba(31,51,80,.12); }
+  .snap img, .snap video { width:100%; object-fit:cover; }
+  .snap::before { content:""; position:absolute; top:-12px; left:50%; width:96px; height:26px; margin-left:-48px; background:var(--tape); transform:rotate(-3deg); }
+  .snap .cap { position:absolute; bottom:8px; right:14px; left:14px; font:700 26px/1 "Amatic SC"; color:var(--ink); }
+  .snap.a { transform:rotate(-2.5deg); }
+  .snap.a img { aspect-ratio:4/5; object-position:50% 20%; }
+  .snap.b { transform:rotate(1.2deg); }
+  .snap.b video { aspect-ratio:1; }
+  .arrow { text-align:center; }
+  .arrow svg { width:120px; height:70px; fill:none; stroke:var(--ink); stroke-width:2.2; stroke-linecap:round; }
+  .arrow span { display:block; font:700 24px/1 "Amatic SC"; color:var(--ink); }
+  .intro { display:grid; grid-template-columns: 1.3fr 1fr; gap:40px; margin-top:44px; align-items:end; }
+  .intro p { margin:0; font-size:19px; }
+  .intro .mission { font:700 22px/1.4 "David Libre", serif; color:var(--ink); border-right:3px solid var(--red); padding-right:14px; }
+  .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
+  .btn { display:inline-block; padding:13px 24px; text-decoration:none; font-weight:700; border:2px solid var(--ink); color:var(--ink); }
+  .btn.solid { background:var(--ink); color:var(--paper); }
+  .btn.solid:hover { background:var(--red); border-color:var(--red); }
+
+  /* journey */
+  .sec { margin-top:90px; }
+  .sec h2 { margin:0 0 6px; font:700 clamp(32px, 4vw, 48px)/1.1 "David Libre", serif; color:var(--ink); }
+  .sec .sub { margin:0 0 36px; color:var(--pencil); }
+  .path { position:relative; }
+  .path::before { content:""; position:absolute; top:10px; bottom:10px; right:50%; border-right:2px dashed #b9b2a3; }
+  .step { display:grid; grid-template-columns: 1fr 1fr; gap:56px; align-items:center; margin-bottom:50px; position:relative; }
+  .step::after { content:""; position:absolute; right:calc(50% - 7px); top:50%; width:14px; height:14px; border-radius:50%; background:var(--paper); border:2px solid var(--ink); }
+  .step:nth-child(even) .snap { order:2; }
+  .step .snap img { aspect-ratio:4/3; }
+  .step:nth-child(odd) .snap { transform:rotate(-1.5deg); }
+  .step:nth-child(even) .snap { transform:rotate(1.5deg); }
+  .step h3 { margin:0 0 6px; font:700 28px/1.2 "David Libre", serif; color:var(--ink); }
+  .step p { margin:0; }
+  .step .when { font:700 26px/1 "Amatic SC"; color:var(--red); }
+  .step .note { border:2px dashed #b9b2a3; padding:22px; font:700 28px/1.2 "Amatic SC"; color:var(--pencil); text-align:center; }
+
+  /* lectures: index cards */
+  .cards { display:grid; grid-template-columns: repeat(2, 1fr); gap:26px; }
+  .card { background:#fff; padding:22px 24px 20px; box-shadow:0 1px 2px rgba(0,0,0,.1), 0 8px 18px rgba(31,51,80,.08);
+          background-image:linear-gradient(#fff 0 44px, transparent 44px), repeating-linear-gradient(#fff 0 27px, #dfe6ee 27px 28px); border-top:4px solid var(--red); }
+  .card .no { font:700 26px/1 "Amatic SC"; color:var(--red); }
+  .card h3 { margin:4px 0 10px; font:700 24px/1.25 "David Libre", serif; color:var(--ink); }
+  .card p { margin:0 0 12px; line-height:28px; }
+  .card .for { font-size:15px; color:var(--pencil); }
+  .card .for b { color:var(--ink); }
+
+  .aud { list-style:none; margin:0; padding:0; }
+  .aud li { display:grid; grid-template-columns: 240px 1fr; gap:20px; padding:16px 0; border-bottom:1px solid #ddd5c6; align-items:baseline; }
+  .aud li span { font:700 28px/1 "Amatic SC"; color:var(--red); }
+  .aud li b { font:500 21px/1.4 "David Libre", serif; color:var(--ink); }
+
+  .letter { margin:90px auto 0; max-width:760px; background:#fff; padding:44px 46px 40px; box-shadow:0 1px 2px rgba(0,0,0,.1), 0 14px 30px rgba(31,51,80,.1); position:relative; }
+  .letter::before { content:""; position:absolute; top:-12px; right:40px; width:110px; height:26px; background:var(--tape); transform:rotate(2deg); }
+  .letter h2 { margin:0 0 12px; font:700 clamp(30px, 4vw, 44px)/1.15 "David Libre", serif; color:var(--ink); }
+  .letter .sign { margin-top:22px; font:700 40px/1 "Amatic SC"; color:var(--ink); }
+  .letter .lines { margin-top:18px; font-size:16px; color:var(--pencil); }
+  .letter .lines a { color:var(--ink); }
+  footer { text-align:center; color:var(--pencil); font-size:13px; padding:40px 0 80px; }
+
+  @media (max-width: 860px) {
+    header nav { display:none; }
+    .pair { grid-template-columns: 1fr 1fr; gap:14px; }
+    .arrow { display:none; }
+    .snap { padding:8px 8px 34px; }
+    .snap .cap { font-size:21px; bottom:6px; }
+    .intro { grid-template-columns:1fr; gap:18px; }
+    .path::before { right:14px; }
+    .step { grid-template-columns:1fr; gap:16px; padding-right:40px; }
+    .step::after { right:7px; top:20px; }
+    .step:nth-child(even) .snap { order:0; }
+    .cards { grid-template-columns:1fr; }
+    .aud li { grid-template-columns:1fr; gap:4px; }
+    .letter { padding:34px 22px 30px; }
+  }
+
+  .dz { position:fixed; bottom:12px; left:50%; transform:translateX(-50%); z-index:999; display:flex; gap:14px; align-items:center; white-space:nowrap; background:#111; color:#fff; font:500 13px/1 system-ui, sans-serif; padding:10px 16px; border-radius:999px; box-shadow:0 4px 16px rgba(0,0,0,.35); }
+  .dz a { color:#fff; }
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="logo">שמחה לביא</div><nav><a href="#path">הדרך</a><a href="#lectures">הרצאות</a><a href="#audiences">למי</a><a href="#contact">כתבו לי</a></nav></div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>שמחה לביא</h1>
+    <p class="slogan">אל תכניסו אותי לאף משבצת</p>
+    <div class="pair">
+      <figure class="snap a" style="margin:0"><img src="../images/haredi-childhood.jpg" alt="שמחה כילדה בכיתה"><figcaption class="cap">מכאן...</figcaption></figure>
+      <div class="arrow" aria-hidden="true"><svg viewBox="0 0 120 70"><path d="M112 40 C 85 8, 40 6, 10 34"/><path d="M10 34 l 14 -2 M10 34 l 6 12"/></svg><span>חוסן, אומץ, בחירה</span></div>
+      <figure class="snap b" style="margin:0"><video autoplay muted loop playsinline poster="../images/hero-lecture-poster.jpg"><source src="../videos/hero-lecture.mp4" type="video/mp4"></video><figcaption class="cap">...לכאן</figcaption></figure>
+    </div>
+    <div class="intro">
+      <p>גדלתי בעולם החרדי, שירתתי כקצינה לוחמת, פיקדתי על לוחמים, והבנתי שהחיים לא נכנסים למשבצת אחת. היום אני מביאה לבמה את החיבור שבין אנשים, חוסן ואומץ לבחור מחדש.</p>
+      <div><div class="mission">מטרת חיי – לצמצם פערים בחברה הישראלית.</div><div class="actions"><a class="btn solid" href="#contact">להזמנת הרצאה</a><a class="btn" href="#lectures">ההרצאות</a></div></div>
+    </div>
+  </section>
+
+  <section class="sec" id="path">
+    <h2>אפשר לשנות כיוון בלי למחוק את מי שהיינו</h2>
+    <p class="sub">הדרך שלי לא התחילה על במות.</p>
+    <div class="path">
+      <div class="step"><figure class="snap" style="margin:0"><img src="../images/haredi-hug.jpg" alt="שמחה מחבקת אדם חרדי" loading="lazy"></figure><div><span class="when">הבית</span><h3>החברה החרדית</h3><p>כנערה בסיכון מצאתי את עצמי שואלת שאלות שאין להן תשובות מוכנות מראש. בחרתי לצאת לדרך בלי לדעת לאן.</p></div></div>
+      <div class="step"><figure class="snap" style="margin:0"><img src="../images/officer-salute.jpg" alt="שמחה מצדיעה בטקס" loading="lazy"></figure><div><span class="when">השירות</span><h3>קצינה לוחמת</h3><p>סיימתי קורס קצינים ופיקדתי על לוחמים ולוחמות מכל קצוות החברה הישראלית.</p></div></div>
+      <div class="step"><figure class="snap" style="margin:0"><img src="../images/story-restorative-justice.jpg" alt="מפגש צדק מאחה" loading="lazy"></figure><div><span class="when">השבר</span><h3>צדק מאחה</h3><p>במהלך השירות נפגעתי בתאונת דרכים קשה. מתוך המגבלה נולדה הבחירה לתקן ולסלוח.</p></div></div>
+      <div class="step"><div class="note">כאן תיכנס תמונה מאליפות העולם</div><div><span class="when">השמיים</span><h3>אקרובטיקה אווירית</h3><p>תוך חצי שנה מתחילת האימונים – מקום ראשון באליפות ישראל, וייצוג המדינה באליפות העולם בדרום קוריאה.</p></div></div>
+    </div>
+  </section>
+
+  <section class="sec" id="lectures">
+    <h2>ההרצאות</h2>
+    <p class="sub">ארבעה סיפורים, כל אחד מותאם לקהל שלו.</p>
+    <div class="cards">
+      <article class="card"><span class="no">הרצאת הדגל</span><h3>אל תכניסו אותי לאף משבצת</h3><p>המסע מהמגזר החרדי לקצונה קרבית, יזמות ואליפות העולם. על בחירה, זהות ואומץ.</p><div class="for"><b>למי:</b> כל הקהלים, כנסים, אירועי חברה</div></article>
+      <article class="card"><span class="no">02</span><h3>לבחור בתיקון – יותר טוב לסלוח</h3><p>סיפור תאונת הדרכים והבחירה בצדק מאחה. על אחריות, סליחה, חוסן והתמודדות עם משבר.</p><div class="for"><b>למי:</b> ארגונים, אנשי חינוך, קהילות ומשפט</div></article>
+      <article class="card"><span class="no">03</span><h3>אחדות היא לא אחידות</h3><p>צמצום פערים בחברה הישראלית, חיבור בין עולמות ושיח מעבר לדעות קדומות.</p><div class="for"><b>למי:</b> רשויות, גופים ממשלתיים, מכינות</div></article>
+      <article class="card"><span class="no">04</span><h3>לא חיכיתי להיות מוכנה – פשוט התחלתי</h3><p>ספורט, התמדה ופריצת גבולות – איך בונים מסוגלות עצמית מאפס.</p><div class="for"><b>למי:</b> נוער בסיכון, נשים, צוותים</div></article>
+    </div>
+  </section>
+
+  <section class="sec" id="audiences">
+    <h2>למי זה מתאים</h2>
+    <ul class="aud">
+      <li><span>ארגונים ומנהלי HR</span><b>מנהיגות, חוסן וגמישות בעולם שרץ מעבר לזמן</b></li>
+      <li><span>אנשי חינוך</span><b>לראות את הנער, לפני שרואים את ההתנהגות</b></li>
+      <li><span>רשויות וחברה אזרחית</span><b>אחדות ולא אחידות – לחיות יחד בלי להיות דומים</b></li>
+      <li><span>נוער וצעירים</span><b>נקודת הפתיחה שלך היא לא נקודת הסיום שלך</b></li>
+      <li><span>העצמה נשית וספורט</span><b>לא חיכיתי להיות מוכנה – פשוט התחלתי</b></li>
+    </ul>
+  </section>
+
+  <section class="letter" id="contact">
+    <h2>בואו נבנה יחד את המפגש הבא שלכם</h2>
+    <p>כל קהל מגיע עם המטען והצרכים שלו. כתבו לי כמה מילים על הארגון, הצוות או הנוער שלכם – ונתאים את ההרצאה בדיוק אליכם.</p>
+    <div class="actions"><a class="btn solid" href="https://wa.me/972538899272" target="_blank" rel="noopener">לכתוב בוואטסאפ</a><a class="btn" href="mailto:sisidigital.bh@gmail.com">לשלוח מייל</a></div>
+    <div class="sign">שמחה</div>
+    <div class="lines"><a href="https://wa.me/972538899272" dir="ltr">053-889-9272</a> · <a href="mailto:sisidigital.bh@gmail.com" dir="ltr">sisidigital.bh@gmail.com</a> · <a href="https://www.instagram.com/simcha_lavii/" dir="ltr">@simcha_lavii</a></div>
+  </section>
+</main>
+<footer>© שמחה לביא</footer>
+<nav class="dz" aria-label="מעבר בין אפשרויות"><a href="4-stage.html">→ הקודם</a><span>5/5 · מכאן לכאן</span><a href="index.html">כל האפשרויות</a></nav>
+</body>
+</html>

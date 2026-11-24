@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>אפשרות 3 · תיק אישי | שמחה לביא</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#dcd5c0; --paper2:#e6e0cd; --olive:#39432c; --dark:#1b1e16; --orange:#d9602a; --line:#39432c55; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--dark); font:400 17px/1.65 "IBM Plex Sans Hebrew", system-ui, sans-serif; }
+  img, video { display:block; max-width:100%; }
+  a { color:inherit; }
+  .mono { font-family:"IBM Plex Mono", monospace; }
+  .wrap { max-width:1160px; margin:0 auto; padding:0 20px; }
+
+  .strip { background:var(--olive); color:var(--paper2); font:400 13px/1 "IBM Plex Mono", monospace; letter-spacing:.06em; }
+  .strip .wrap { display:flex; justify-content:space-between; gap:12px; padding-top:11px; padding-bottom:11px; }
+  header .wrap { display:flex; align-items:center; justify-content:space-between; padding-top:18px; padding-bottom:18px; border-bottom:1px solid var(--line); }
+  .brand { font-weight:700; font-size:19px; }
+  .brand span { color:var(--orange); }
+  header nav { display:flex; gap:22px; font-size:15px; font-weight:500; }
+  header nav a { text-decoration:none; }
+
+  .lbl { font:600 12px/1 "IBM Plex Mono", monospace; letter-spacing:.12em; color:var(--olive); }
+
+  /* ID card hero */
+  .card { margin:34px 0 0; display:grid; grid-template-columns: 300px 1fr; gap:0; background:var(--paper2); border:1px solid var(--olive); }
+  .photo { border-left:1px solid var(--olive); padding:18px; position:relative; }
+  .photo img { width:100%; aspect-ratio:3/4; object-fit:cover; filter:sepia(.15) saturate(.9); }
+  .photo .no { margin-top:10px; display:flex; justify-content:space-between; font:400 12px/1 "IBM Plex Mono", monospace; }
+  .fields { padding:24px 30px 28px; }
+  .fields h1 { margin:6px 0 4px; font:700 clamp(38px, 5.6vw, 70px)/1.02 "IBM Plex Sans Hebrew"; letter-spacing:-.01em; }
+  .fields h1 b { color:var(--orange); }
+  .slogan { margin:0 0 20px; font-size:19px; }
+  dl { display:grid; grid-template-columns: 130px 1fr; margin:0; border-top:1px solid var(--line); }
+  dt, dd { margin:0; padding:10px 0; border-bottom:1px solid var(--line); }
+  dt { font:600 12px/1.9 "IBM Plex Mono", monospace; letter-spacing:.08em; color:var(--olive); }
+  .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:22px; }
+  .btn { display:inline-flex; gap:10px; align-items:center; padding:13px 20px; font-weight:700; text-decoration:none; border:1.5px solid var(--dark); }
+  .btn.solid { background:var(--dark); color:var(--paper2); }
+  .btn.solid:hover { background:var(--orange); border-color:var(--orange); color:var(--dark); }
+
+  /* timeline */
+  .sec-h { display:flex; align-items:baseline; gap:16px; margin:70px 0 22px; }
+  .sec-h h2 { margin:0; font:700 clamp(26px, 3.2vw, 38px)/1.1 "IBM Plex Sans Hebrew"; }
+  .timeline { display:grid; grid-template-columns: repeat(5, 1fr); border-top:2px solid var(--dark); }
+  .stop { padding:16px 14px 0 14px; border-left:1px solid var(--line); position:relative; }
+  .stop:last-child { border-left:0; }
+  .stop::before { content:""; position:absolute; top:-7px; right:14px; width:12px; height:12px; background:var(--orange); }
+  .stop .yr { font:600 12px/1 "IBM Plex Mono", monospace; color:var(--olive); }
+  .stop h3 { margin:8px 0 6px; font-size:19px; }
+  .stop p { margin:0 0 12px; font-size:14.5px; line-height:1.55; }
+  .stop .ph { aspect-ratio:4/5; overflow:hidden; background:var(--olive); }
+  .stop .ph img, .stop .ph video { width:100%; height:100%; object-fit:cover; }
+  .stop .ph.empty { display:flex; align-items:flex-end; padding:12px; color:var(--paper2); font:600 12px/1.4 "IBM Plex Mono", monospace; }
+
+  /* briefings */
+  table { width:100%; border-collapse:collapse; background:var(--paper2); border:1px solid var(--olive); }
+  th { text-align:right; font:600 12px/1 "IBM Plex Mono", monospace; letter-spacing:.08em; color:var(--paper2); background:var(--olive); padding:12px 14px; }
+  td { padding:16px 14px; border-top:1px solid var(--line); vertical-align:top; }
+  td.code { font:600 14px/1.4 "IBM Plex Mono", monospace; color:var(--orange); white-space:nowrap; }
+  td h3 { margin:0; font-size:19px; }
+  td .flag { display:inline-block; margin-top:6px; font:600 11px/1 "IBM Plex Mono", monospace; border:1px solid var(--orange); color:var(--orange); padding:4px 6px; }
+
+  .aud { display:grid; grid-template-columns: repeat(5, 1fr); gap:12px; }
+  .aud div { border:1px solid var(--olive); padding:16px 14px; background:var(--paper2); }
+  .aud .lbl { display:block; margin-bottom:10px; }
+  .aud b { font-weight:500; line-height:1.4; display:block; }
+
+  .contact { margin-top:70px; background:var(--olive); color:var(--paper2); }
+  .contact .wrap { display:grid; grid-template-columns: 1.3fr 1fr; gap:40px; padding-top:50px; padding-bottom:56px; }
+  .contact h2 { margin:8px 0 12px; font:700 clamp(30px, 4.4vw, 52px)/1.08 "IBM Plex Sans Hebrew"; }
+  .contact .lbl { color:#c6c0a8; }
+  .contact .btn { border-color:var(--paper2); color:var(--paper2); }
+  .contact .btn.solid { background:var(--orange); border-color:var(--orange); color:var(--dark); }
+  .contact dl { border-top-color:#ffffff33; }
+  .contact dt, .contact dd { border-bottom-color:#ffffff33; }
+  .contact dt { color:#c6c0a8; }
+  .contact dd a { text-decoration:none; }
+  footer { background:var(--dark); color:#8d927f; font:400 12px/1 "IBM Plex Mono", monospace; padding:16px 0 80px; text-align:center; }
+
+  @media (max-width: 900px) {
+    header nav { display:none; }
+    .strip .wrap span:nth-child(2) { display:none; }
+    .card { grid-template-columns:1fr; }
+    .photo { border-left:0; border-bottom:1px solid var(--olive); display:grid; grid-template-columns: 140px 1fr; gap:14px; align-items:end; }
+    .photo .no { flex-direction:column; gap:8px; }
+    .fields { padding:20px 18px 24px; }
+    dl { grid-template-columns: 96px 1fr; }
+    .timeline { grid-template-columns: repeat(5, 72%); overflow-x:auto; scroll-snap-type:x mandatory; border-top:0; }
+    .stop { scroll-snap-align:start; border-top:2px solid var(--dark); }
+    table, thead, tbody, tr, td { display:block; }
+    thead { display:none; }
+    tr { border-top:1px solid var(--olive); padding:6px 0; }
+    td { border:0; padding:6px 14px; }
+    .aud { grid-template-columns:1fr 1fr; }
+    .contact .wrap { grid-template-columns:1fr; }
+  }
+
+  .dz { position:fixed; bottom:12px; left:50%; transform:translateX(-50%); z-index:999; display:flex; gap:14px; align-items:center; white-space:nowrap; background:#111; color:#fff; font:500 13px/1 system-ui, sans-serif; padding:10px 16px; border-radius:999px; box-shadow:0 4px 16px rgba(0,0,0,.35); }
+  .dz a { color:#fff; }
+</style>
+</head>
+<body>
+<div class="strip"><div class="wrap"><span>תיק אישי</span><span>הרצאות · סדנאות · מפגשים</span><span>053-889-9272</span></div></div>
+<header><div class="wrap"><div class="brand">שמחה לביא<span>.</span></div><nav><a href="#path">המסלול</a><a href="#lectures">הרצאות</a><a href="#audiences">קהלים</a><a href="#contact">יצירת קשר</a></nav></div></header>
+
+<main class="wrap">
+  <section class="card">
+    <div class="photo">
+      <img src="../images/orange-beret-portrait.jpg" alt="שמחה לביא במדים עם כומתה כתומה">
+      <div class="no"><span>שם: שמחה לביא</span><span>@simcha_lavii</span></div>
+    </div>
+    <div class="fields">
+      <div class="lbl">ייעוד</div>
+      <h1>אל תכניסו אותי <b>לאף משבצת</b></h1>
+      <p class="slogan">מטרת חיי – לצמצם פערים בחברה הישראלית.</p>
+      <dl>
+        <dt>רקע</dt><dd>גדלה בעולם החרדי, נערה בסיכון</dd>
+        <dt>שירות</dt><dd>קצינה לוחמת, פיקדה על לוחמים ולוחמות</dd>
+        <dt>ספורט</dt><dd>מקום ראשון באליפות ישראל, נבחרת ישראל באליפות העולם באקרובטיקה אווירית</dd>
+        <dt>היום</dt><dd>יזמית חברתית, מרצה ויוצרת תוכן</dd>
+      </dl>
+      <div class="actions"><a class="btn solid" href="#contact">להזמנת הרצאה</a><a class="btn" href="#lectures">קטלוג הרצאות</a></div>
+    </div>
+  </section>
+
+  <div class="sec-h" id="path"><span class="lbl">ציר</span><h2>המסלול – חמש תחנות</h2></div>
+  <div class="timeline">
+    <div class="stop"><span class="yr">תחנה 01</span><h3>הבית החרדי</h3><p>שאלות שאין להן תשובות מוכנות מראש.</p><div class="ph"><img src="../images/haredi-childhood.jpg" alt="שמחה כילדה" loading="lazy"></div></div>
+    <div class="stop"><span class="yr">תחנה 02</span><h3>קצונה ופיקוד</h3><p>לוחמים ולוחמות מכל קצוות החברה.</p><div class="ph"><img src="../images/officer-salute.jpg" alt="שמחה מצדיעה" loading="lazy"></div></div>
+    <div class="stop"><span class="yr">תחנה 03</span><h3>צדק מאחה</h3><p>מתוך המגבלה – הבחירה לתקן ולסלוח.</p><div class="ph"><img src="../images/story-restorative-justice.jpg" alt="מפגש צדק מאחה" loading="lazy"></div></div>
+    <div class="stop"><span class="yr">תחנה 04</span><h3>אקרובטיקה אווירית</h3><p>חצי שנה מהאימון הראשון – אליפות העולם.</p><div class="ph empty">כאן תיכנס תמונה מאליפות העולם בדרום קוריאה</div></div>
+    <div class="stop"><span class="yr">תחנה 05</span><h3>הבמה</h3><p>הרצאות, מפגשים ומיזמים לצמצום פערים.</p><div class="ph"><video autoplay muted loop playsinline poster="../images/hero-lecture-poster.jpg"><source src="../videos/hero-lecture.mp4" type="video/mp4"></video></div></div>
+  </div>
+
+  <div class="sec-h" id="lectures"><span class="lbl">תדריכים</span><h2>ההרצאות</h2></div>
+  <table>
+    <thead><tr><th>קוד</th><th>שם ההרצאה</th><th>על מה מדברים</th><th>למי מתאים</th></tr></thead>
+    <tbody>
+      <tr><td class="code">01</td><td><h3>אל תכניסו אותי לאף משבצת</h3><span class="flag">הרצאת הדגל</span></td><td>המסע מהמגזר החרדי לקצונה קרבית, יזמות ואליפות העולם. על בחירה, זהות ואומץ.</td><td>כל הקהלים, כנסים, אירועי חברה</td></tr>
+      <tr><td class="code">02</td><td><h3>לבחור בתיקון – יותר טוב לסלוח</h3></td><td>סיפור תאונת הדרכים והבחירה בצדק מאחה. אחריות, סליחה, חוסן ומשבר.</td><td>ארגונים, אנשי חינוך, קהילות ומשפט</td></tr>
+      <tr><td class="code">03</td><td><h3>אחדות היא לא אחידות</h3></td><td>צמצום פערים, חיבור בין עולמות ושיח מעבר לדעות קדומות.</td><td>רשויות, גופים ממשלתיים, מכינות</td></tr>
+      <tr><td class="code">04</td><td><h3>לא חיכיתי להיות מוכנה – פשוט התחלתי</h3></td><td>ספורט, התמדה ופריצת גבולות – מסוגלות עצמית מאפס.</td><td>נוער בסיכון, נשים, צוותים</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sec-h" id="audiences"><span class="lbl">יעד</span><h2>למי זה מתאים</h2></div>
+  <div class="aud">
+    <div><span class="lbl">ארגונים / HR</span><b>מנהיגות, חוסן וגמישות בעולם שרץ מעבר לזמן</b></div>
+    <div><span class="lbl">חינוך</span><b>לראות את הנער, לפני שרואים את ההתנהגות</b></div>
+    <div><span class="lbl">רשויות</span><b>אחדות ולא אחידות</b></div>
+    <div><span class="lbl">נוער</span><b>נקודת הפתיחה שלך היא לא נקודת הסיום שלך</b></div>
+    <div><span class="lbl">נשים / ספורט</span><b>לא חיכיתי להיות מוכנה – פשוט התחלתי</b></div>
+  </div>
+</main>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div><span class="lbl">יצירת קשר</span><h2>בואו נבנה יחד את המפגש הבא שלכם</h2><p>כל קהל מגיע עם המטען והצרכים שלו – נתאים את ההרצאה בדיוק לארגון, לצוות או לנוער שלכם.</p>
+    <div class="actions"><a class="btn solid" href="https://wa.me/972538899272" target="_blank" rel="noopener">וואטסאפ</a><a class="btn" href="mailto:sisidigital.bh@gmail.com">מייל</a></div></div>
+  <dl><dt>טלפון</dt><dd><a href="https://wa.me/972538899272" dir="ltr">053-889-9272</a></dd><dt>מייל</dt><dd><a href="mailto:sisidigital.bh@gmail.com" dir="ltr">sisidigital.bh@gmail.com</a></dd><dt>אינסטגרם</dt><dd><a href="https://www.instagram.com/simcha_lavii/" dir="ltr">@simcha_lavii</a></dd></dl>
+</div></section>
+<footer>© שמחה לביא</footer>
+<nav class="dz" aria-label="מעבר בין אפשרויות"><a href="2-boxes.html">→ הקודם</a><span>3/5 · תיק אישי</span><a href="4-stage.html">הבא ←</a></nav>
+</body>
+</html>

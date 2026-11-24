@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>אפשרות 2 · משבצות | שמחה לביא</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#e7e4dd; --ink:#101010; --orange:#ff5a1f; --line:2px solid var(--ink); }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:400 17px/1.6 "Rubik", system-ui, sans-serif; }
+  img, video { display:block; max-width:100%; }
+  a { color:inherit; }
+  .frame { max-width:1240px; margin:0 auto; border-inline:var(--line); }
+
+  header { display:grid; grid-template-columns: auto 1fr auto; border-bottom:var(--line); }
+  header > * { padding:16px 20px; }
+  .logo { font-weight:900; font-size:20px; border-left:var(--line); }
+  header nav { display:flex; gap:24px; align-items:center; font-weight:500; font-size:15px; }
+  header nav a { text-decoration:none; }
+  .cta-top { background:var(--ink); color:#fff; font-weight:700; text-decoration:none; display:flex; align-items:center; }
+  .cta-top:hover { background:var(--orange); color:var(--ink); }
+
+  /* hero grid of boxes */
+  .hero { display:grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: 170px 170px 170px auto; border-bottom:var(--line); position:relative; }
+  .hero > * { border-left:var(--line); border-bottom:var(--line); }
+  .hero > *:nth-child(4n) { border-left:0; }
+  .word { display:flex; align-items:flex-end; padding:14px 18px; font:900 clamp(40px, 6.2vw, 84px)/.9 "Rubik"; letter-spacing:-.02em; }
+  .media { grid-column: 3 / 5; grid-row: 1 / 4; position:relative; overflow:visible; border-left:0 !important; }
+  .media video { position:absolute; inset:24px -2px 24px 24px; width:calc(100% - 22px); height:calc(100% - 48px); object-fit:cover; filter:grayscale(1) contrast(1.08); }
+  .media .tag { position:absolute; bottom:-18px; right:28px; background:var(--orange); padding:8px 14px; font-weight:700; font-size:14px; z-index:2; }
+  .breakout { grid-column: 1 / 3; grid-row: 3; position:relative; overflow:visible; }
+  .breakout span { position:absolute; right:-14px; bottom:22px; z-index:3; background:var(--orange); color:var(--ink); font:900 clamp(38px, 6vw, 82px)/1 "Rubik"; padding:4px 18px 10px; transform:rotate(-5deg); white-space:nowrap; box-shadow:8px 8px 0 var(--ink); }
+  .meta { grid-column: 1 / 5; display:grid; grid-template-columns: repeat(4, 1fr); border:0 !important; }
+  .meta > div { padding:18px 20px; border-left:var(--line); }
+  .meta > div:last-child { border-left:0; }
+  .meta small { display:block; font-size:12px; letter-spacing:.08em; opacity:.6; margin-bottom:4px; }
+  .meta b { font-size:18px; }
+  .meta .go { background:var(--ink); color:#fff; text-decoration:none; display:flex; align-items:center; justify-content:space-between; font-weight:700; font-size:19px; }
+  .meta .go:hover { background:var(--orange); color:var(--ink); }
+
+  .row { display:grid; border-bottom:var(--line); }
+  .row > * { padding:34px 28px; border-left:var(--line); }
+  .row > *:last-child { border-left:0; }
+  .label { font-weight:700; font-size:13px; letter-spacing:.1em; }
+  .label::before { content:"■ "; color:var(--orange); }
+
+  .about { grid-template-columns: 1fr 2fr 1fr; }
+  .about h2 { font:900 clamp(28px, 3.4vw, 44px)/1.1 "Rubik"; margin:10px 0 0; }
+  .about p { margin:0 0 14px; }
+  .about img { width:100%; height:100%; min-height:320px; object-fit:cover; }
+  .about .pic { padding:0; }
+
+  .lectures { grid-template-columns: repeat(4, 1fr); }
+  .lecture { padding:28px 24px 30px; transition:background .2s; min-height:300px; display:flex; flex-direction:column; }
+  .lecture:hover { background:var(--orange); }
+  .lecture .n { font:900 72px/1 "Rubik"; letter-spacing:-.04em; }
+  .lecture h3 { font:700 22px/1.25 "Rubik"; margin:16px 0 10px; }
+  .lecture p { margin:0 0 14px; font-size:15px; }
+  .lecture .for { margin-top:auto; font-size:14px; border-top:1px solid currentColor; padding-top:10px; }
+  .lecture.flag { background:var(--ink); color:#fff; }
+  .lecture.flag:hover { background:var(--orange); color:var(--ink); }
+
+  .head-row { grid-template-columns: 1fr 3fr; }
+  .head-row h2 { margin:0; font:900 clamp(30px, 4vw, 52px)/1 "Rubik"; }
+
+  .aud { grid-template-columns: repeat(5, 1fr); }
+  .aud > div { padding:24px 20px; }
+  .aud small { display:block; font-weight:700; font-size:13px; margin-bottom:10px; }
+  .aud b { font-weight:500; font-size:18px; line-height:1.35; }
+
+  .contact { background:var(--orange); grid-template-columns: 2fr 1fr; }
+  .contact h2 { margin:0 0 12px; font:900 clamp(36px, 5.4vw, 72px)/1 "Rubik"; letter-spacing:-.02em; }
+  .contact p { margin:0; max-width:46ch; }
+  .contact .links { display:flex; flex-direction:column; justify-content:center; gap:12px; }
+  .contact .links a { display:block; background:var(--ink); color:#fff; text-decoration:none; font-weight:700; padding:16px 18px; }
+  .contact .links a.alt { background:transparent; color:var(--ink); border:var(--line); }
+  footer { padding:16px 20px 80px; font-size:13px; }
+
+  @media (max-width: 900px) {
+    header { grid-template-columns: 1fr auto; }
+    header nav { display:none; }
+    .hero { grid-template-columns: 1fr 1fr; grid-template-rows: 120px 120px 120px 360px auto; }
+    .hero > *:nth-child(4n) { border-left:var(--line); }
+    .hero > *:nth-child(2n) { border-left:0; }
+    .word { font-size: clamp(34px, 11vw, 56px); }
+    .media { grid-column: 1 / 3; grid-row: 4; border-bottom:var(--line) !important; }
+    .media video { inset:20px 20px 30px 20px; width:calc(100% - 40px); height:calc(100% - 50px); }
+    .breakout { grid-column: 1 / 3; grid-row: 3; border-left:0 !important; }
+    .breakout span { right:auto; left:10px; bottom:18px; }
+    .meta { grid-column: 1 / 3; grid-template-columns: 1fr 1fr; }
+    .breakout span { font-size: clamp(34px, 10vw, 52px); }
+    .meta > div { border-bottom:var(--line); }
+    .meta > div:nth-child(2n) { border-left:0; }
+    .about, .lectures, .head-row, .aud, .contact { grid-template-columns: 1fr; }
+    .row > * { border-left:0; border-bottom:var(--line); }
+    .row > *:last-child { border-bottom:0; }
+    .lecture { min-height:0; }
+    .about .pic img { min-height:260px; max-height:420px; }
+  }
+
+  .dz { position:fixed; bottom:12px; left:50%; transform:translateX(-50%); z-index:999; display:flex; gap:14px; align-items:center; white-space:nowrap; background:#111; color:#fff; font:500 13px/1 system-ui, sans-serif; padding:10px 16px; border-radius:999px; box-shadow:0 4px 16px rgba(0,0,0,.35); }
+  .dz a { color:#fff; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <header>
+    <div class="logo">שמחה לביא</div>
+    <nav><a href="#about">עליי</a><a href="#lectures">הרצאות</a><a href="#audiences">קהלים</a><a href="#contact">צור קשר</a></nav>
+    <a class="cta-top" href="#contact">להזמנת הרצאה ←</a>
+  </header>
+
+  <section class="hero">
+    <div class="word">אל</div>
+    <div class="word">תכניסו</div>
+    <div class="media">
+      <video autoplay muted loop playsinline poster="../images/hero-lecture-poster.jpg"><source src="../videos/hero-lecture.mp4" type="video/mp4"></video>
+      <div class="tag">טעימה מהבמה ▶</div>
+    </div>
+    <div class="word">אותי</div>
+    <div class="word" aria-hidden="true"></div>
+    <div class="breakout"><span>לאף משבצת</span></div>
+    <div class="meta">
+      <div><small>01</small><b>קצינה לוחמת</b></div>
+      <div><small>02</small><b>יזמית חברתית</b></div>
+      <div><small>03</small><b>אליפות העולם באקרובטיקה אווירית</b></div>
+      <a class="go" href="#contact">מטרת חיי: לצמצם פערים <span>←</span></a>
+    </div>
+  </section>
+
+  <section class="row about" id="about">
+    <div><div class="label">עליי</div><h2>אפשר לשנות כיוון בלי למחוק את מי שהיינו</h2></div>
+    <div>
+      <p>גדלתי בחברה החרדית, וכנערה בסיכון מצאתי את עצמי שואלת שאלות שאין להן תשובות מוכנות. התגייסתי, סיימתי קורס קצינים ופיקדתי על לוחמים ולוחמות מכל קצוות החברה הישראלית.</p>
+      <p>במהלך השירות נפגעתי בתאונת דרכים קשה, ומתוך המגבלה בחרתי בצדק מאחה. אחר כך נכנסתי לאקרובטיקה אווירית – ותוך חצי שנה זכיתי במקום הראשון באליפות ישראל וייצגתי את המדינה באליפות העולם בדרום קוריאה.</p>
+      <p>היום אני מחברת בין העולמות האלה כדי לייצר שיח שמצמצם פערים, מעבר לתוויות.</p>
+    </div>
+    <div class="pic"><img src="../images/portrait-white-chair.jpg" alt="שמחה לביא" loading="lazy"></div>
+  </section>
+
+  <section class="row head-row" id="lectures">
+    <div class="label">קטלוג</div><h2>ארבע הרצאות. אף אחת לא נכנסת לתבנית.</h2>
+  </section>
+  <section class="row lectures">
+    <article class="lecture flag"><span class="n">01</span><h3>אל תכניסו אותי לאף משבצת</h3><p>מהמגזר החרדי לקצונה קרבית, יזמות ואליפות העולם. על בחירה, זהות ואומץ.</p><div class="for">הרצאת הדגל · כל הקהלים, כנסים, אירועי חברה</div></article>
+    <article class="lecture"><span class="n">02</span><h3>לבחור בתיקון – יותר טוב לסלוח</h3><p>תאונת הדרכים והבחירה בצדק מאחה. אחריות, סליחה וחוסן.</p><div class="for">ארגונים, אנשי חינוך, קהילות ומשפט</div></article>
+    <article class="lecture"><span class="n">03</span><h3>אחדות היא לא אחידות</h3><p>צמצום פערים, חיבור בין עולמות ושיח מעבר לדעות קדומות.</p><div class="for">רשויות, גופים ממשלתיים, מכינות</div></article>
+    <article class="lecture"><span class="n">04</span><h3>לא חיכיתי להיות מוכנה – פשוט התחלתי</h3><p>ספורט, התמדה ופריצת גבולות – מסוגלות עצמית מאפס.</p><div class="for">נוער בסיכון, נשים, צוותים</div></article>
+  </section>
+
+  <section class="row aud" id="audiences">
+    <div><small>ארגונים ו-HR</small><b>מנהיגות, חוסן וגמישות בעולם שרץ מעבר לזמן</b></div>
+    <div><small>אנשי חינוך</small><b>לראות את הנער, לפני שרואים את ההתנהגות</b></div>
+    <div><small>רשויות</small><b>אחדות ולא אחידות – לחיות יחד בלי להיות דומים</b></div>
+    <div><small>נוער וצעירים</small><b>נקודת הפתיחה שלך היא לא נקודת הסיום שלך</b></div>
+    <div><small>העצמה נשית</small><b>לא חיכיתי להיות מוכנה – פשוט התחלתי</b></div>
+  </section>
+
+  <section class="row contact" id="contact">
+    <div><div class="label" style="color:var(--ink)">צור קשר</div><h2>בואו נבנה את המפגש הבא שלכם</h2><p>השאירו פרטים ונתאים את ההרצאה בדיוק לארגון, לצוות או לנוער שלכם.</p></div>
+    <div class="links"><a href="https://wa.me/972538899272" target="_blank" rel="noopener">וואטסאפ · 053-889-9272</a><a class="alt" href="mailto:sisidigital.bh@gmail.com">sisidigital.bh@gmail.com</a></div>
+  </section>
+  <footer>© שמחה לביא</footer>
+</div>
+<nav class="dz" aria-label="מעבר בין אפשרויות"><a href="1-magazine.html">→ הקודם</a><span>2/5 · משבצות</span><a href="3-file.html">הבא ←</a></nav>
+</body>
+</html>
