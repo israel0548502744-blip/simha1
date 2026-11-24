@@ -94,6 +94,8 @@ const SITE_CONFIG = {
     a.addEventListener("click", () => {
       const radio = $$('#f-type input[name="type"]').find((r) => r.value === a.dataset.audience);
       if (radio) radio.checked = true;
+      const msg = $("#f-msg");
+      if (msg && a.dataset.msg && (!msg.value.trim() || msg.dataset.auto === "1")) { msg.value = a.dataset.msg; msg.dataset.auto = "1"; }
     })
   );
 

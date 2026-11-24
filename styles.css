@@ -176,12 +176,18 @@ h1, h2, h3 { margin: 0; }
 .from { color: #b6c0ca; font-size: 18px; margin: 0 0 22px; }
 .from b { color: var(--text); }
 
-/* ---------- impact ---------- */
-.impact-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); margin-bottom: 34px; }
-.impact-grid article { padding: 24px 22px 6px 0; padding-inline-start: 22px; border-inline-start: 1px solid var(--line); }
-.impact-grid article:first-child { border-inline-start: 0; padding-inline-start: 0; }
-.impact-grid h3 { margin: 0 0 8px; font: 700 clamp(30px, 2.8vw, 38px)/1 var(--disp); }
-.impact-grid p { margin: 0; color: var(--muted); font-size: 17px; }
+/* ---------- impact: project cards ---------- */
+.projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.proj { display: flex; flex-direction: column; background: var(--bg2); border: 1px solid var(--line); border-top: 3px solid var(--accent); padding: 28px 26px; scroll-margin-top: 90px; transition: box-shadow .3s; }
+.proj:target { box-shadow: 0 0 0 2px var(--accent); }
+.proj-k { margin: 0 0 6px; font: 700 15px/1.3 var(--body); letter-spacing: .06em; color: var(--accent); }
+.proj h3 { margin: 0 0 12px; font: 700 clamp(36px, 3.2vw, 46px)/1 var(--disp); }
+.proj p { margin: 0 0 10px; color: #c4ccd4; font-size: 18px; }
+.proj .proj-strong { color: var(--text); font-weight: 700; }
+.proj .proj-tags { color: var(--text); font-weight: 600; font-size: 16px; }
+.proj-tags span { color: var(--accent); margin: 0 4px; }
+.proj-cta { margin-top: auto; padding-top: 18px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+.proj-cta .btn { white-space: normal; text-align: center; }
 
 /* ---------- contact ---------- */
 .contact { margin-top: 90px; padding: 90px 0 110px; border-top: 1px solid var(--line); }
@@ -257,8 +263,8 @@ h1, h2, h3 { margin: 0; }
   .tl::before { right: 19px; }
   .tl img { grid-column: 2; }
   .panel { grid-template-columns: 1fr; gap: 16px; }
-  .impact-grid { grid-template-columns: 1fr; }
-  .impact-grid article, .impact-grid article:first-child { border-inline-start: 0; padding-inline-start: 0; border-bottom: 1px solid var(--line); padding-bottom: 20px; }
+  .projects { grid-template-columns: 1fr; }
+  .proj-cta .btn { width: 100%; }
   .contact-grid { grid-template-columns: 1fr; gap: 30px; }
 
   .sticky-cta {
