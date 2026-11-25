@@ -85,7 +85,7 @@ const SITE_CONFIG = {
       t.tabIndex = t.getAttribute("aria-selected") === "true" ? 0 : -1;
       t.addEventListener("click", () => {
         select(t);
-        // keep the address shareable: simha1.vercel.app/#hr opens on this audience
+        // keep the address shareable: www.simchalavi.com/#hr opens on this audience
         if (t.dataset.hash) history.replaceState(null, "", "#" + t.dataset.hash);
       });
       t.addEventListener("keydown", (e) => {
