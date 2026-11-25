@@ -63,6 +63,7 @@ const SITE_CONFIG = {
   });
 
   /* ---------- audience tabs ---------- */
+  $$('#f-type input[name="type"]').forEach((r) => r.addEventListener("change", () => { $("#contact-form").dataset.picked = "1"; }));
   $$("[data-tabs]").forEach((group) => {
     const tabs = $$("[data-tab]", group);
     const panels = $$("[data-panel]", group);
@@ -73,6 +74,11 @@ const SITE_CONFIG = {
         t.tabIndex = on ? 0 : -1;
       });
       panels.forEach((p) => { p.hidden = p.dataset.panel !== tab.dataset.tab; });
+      // the audience chosen here is already ticked in the booking form (unless the visitor picked one there)
+      const cta = $(`[data-panel="${tab.dataset.tab}"] [data-audience]`, group);
+      const radio = cta && $$('#f-type input[name="type"]').find((r) => r.value === cta.dataset.audience);
+      const form = $("#contact-form");
+      if (radio && form && form.dataset.picked !== "1") radio.checked = true;
     };
     group.selectTab = select;
     tabs.forEach((t, i) => {

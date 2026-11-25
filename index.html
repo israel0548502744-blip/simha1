@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&family=Assistant:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230F1C27'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' fill='%23B9CCDD' text-anchor='middle'%3ESL%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=20261125f">
+  <link rel="stylesheet" href="styles.css?v=20261125g">
 </head>
 <body>
 
@@ -33,6 +33,7 @@
       </ul>
       <a href="#story">הסיפור שלי</a>
       <a href="#lecture">הרצאות ומפגשים</a>
+      <a href="#match" class="nav-match">התאמת הרצאה</a>
       <a href="#impact">עשייה חברתית</a>
       <a href="#contact" class="btn nav-cta">להזמנת הרצאה / שיתוף פעולה</a>
     </nav>
@@ -188,7 +189,7 @@
   <div class="wrap" data-tabs>
     <p class="label kicker mid">הרצאה אחת שמחברת בין העולמות</p>
     <h2>נערה בסיכוי. נגד כל הסיכונים.</h2>
-    <p class="sub">הסיפור אותו סיפור. הדגש משתנה לפי מי שיושב באולם. בחרו את הקהל שלכם:</p>
+    <p class="sub" id="match">הסיפור אותו סיפור. הדגש משתנה לפי מי שיושב באולם. בחרו את הקהל שלכם:</p>
     <div class="tabs aud" role="tablist" aria-label="בחירת קהל">
       <button type="button" role="tab" id="tab-org" aria-controls="panel-org" data-tab="org" data-hash="hr" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 13h18"/></svg><span class="aud-t">חברות, ארגונים ומנהלי HR</span><span class="aud-fit"><b>מתאים ל:</b> הנהלות, ימי גיבוש, כנסים מקצועיים, יום האישה ופורומים ניהוליים</span></button>
       <button type="button" role="tab" id="tab-edu" aria-controls="panel-edu" data-tab="edu" data-hash="edu" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9.5 12 5l10 4.5L12 14z"/><path d="M6 11.6V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.4M22 9.5v5"/></svg><span class="aud-t">אנשי חינוך, יועצים וצוותי הוראה</span><span class="aud-fit"><b>מתאים ל:</b> מורים, יועצים חינוכיים, מכינות, מכללות וכנסי חינוך</span></button>
@@ -200,27 +201,27 @@
       <div><p class="fit-m"><b>מתאים ל:</b> הנהלות, ימי גיבוש, כנסים מקצועיים, יום האישה ופורומים ניהוליים</p><p class="hook">״מה אם האדם שהכי קשה לכם להבין הוא דווקא האדם שאתם הכי צריכים להקשיב <span class="nw">לו?״</span></p>
         <h3>מנהיגות, חוסן וצוותים מגוונים</h3>
         <p class="from"><b>נושא ההרצאה:</b> <a href="#st-3">אחדות בעם ישראל</a> · <a href="#st-4">קצינה לוחמת</a> · <a href="#st-5">הפציעה והליך הצדק המאחה</a></p>
-        <a class="btn ghost" href="#contact" data-audience="חברות ו-HR">להזמנת ההרצאה לארגון</a></div>
+        <a class="btn" href="#contact" data-audience="חברות ו-HR">להזמנת ההרצאה לארגון</a></div>
       <div><p class="take">לארגון שלכם:</p><ul><li>איך מובילים אנשים שונים זה מזה לתוצאה אחידה?</li><li>קבלת החלטות בתנאי אי-ודאות</li><li>אחריות, גמישות מחשבתית, הכוח של סליחה</li><li>גם פעולה אסטרטגית יכולה להפוך לערכית</li></ul></div>
     </div>
     <div class="panel" role="tabpanel" id="panel-edu" aria-labelledby="tab-edu" data-panel="edu" hidden>
       <div><p class="fit-m"><b>מתאים ל:</b> מורים, יועצים חינוכיים, מכינות, מכללות וכנסי חינוך</p><h3>לראות את הנער, לפני שבוחנים התנהגות</h3>
         <p class="hook">״לא נתתי לנקודת הפתיחה להגדיר את נקודת הסיום״</p>
         <p class="from"><b>נושא ההרצאה:</b> <a href="#st-1">הנערה מביתר עילית</a> · <a href="#st-2">נערה בסיכוי</a> · <a href="#st-7">עשייה חברתית ו״יוצרות מציאות״</a></p>
-        <a class="btn ghost" href="#contact" data-audience="משרד החינוך / בתי ספר / יועצים">להזמנת ההרצאה לצוות החינוכי</a></div>
+        <a class="btn" href="#contact" data-audience="משרד החינוך / בתי ספר / יועצים">להזמנת ההרצאה לצוות החינוכי</a></div>
       <div><p class="take">״כל המציל נפש אחת בישראל, כאילו הציל עולם ומלואו״</p><ul><li>מה הופך מבוגר ל״דמות משמעותית״</li><li>״כל ילד צריך מבוגר אחד <strong>שידרוש</strong> ממנו״</li><li>לזהות פוטנציאל אצל מי שכבר ויתר על עצמו</li></ul></div>
     </div>
     <div class="panel" role="tabpanel" id="panel-gov" aria-labelledby="tab-gov" data-panel="gov" hidden>
       <div><p class="fit-m"><b>מתאים ל:</b> משרדי ממשלה, עיריות, אגפי רווחה וקהילה, עמותות ופורומים חברתיים</p><h3>אחדות ולא אחידות.<span>פערים נועדו כדי להצטמצם.</span></h3>
         <p class="from"><b>נושא ההרצאה:</b> <a href="#st-2">נערה בסיכוי</a> · <a href="#st-6">ONE SHOT</a> · <a href="#st-7">עשייה חברתית ו״יוצרות מציאות״</a> · <a href="#st-5">הפציעה והליך הצדק המאחה</a></p>
-        <a class="btn ghost" href="#contact" data-audience="רשויות ומשרדי ממשלה">להזמנת ההרצאה לרשות</a></div>
+        <a class="btn" href="#contact" data-audience="רשויות ומשרדי ממשלה">להזמנת ההרצאה לרשות</a></div>
       <div><p class="take">ההשפעה גדולה יותר כשמזהים אותה:</p><ul><li>הנקודות שבהן אפשר לשנות מסלול לנוער בסיכון</li><li>אחדות בעם ישראל</li><li>שיתוף פעולה בין רשות, קהילה ומוסדות</li><li>עשייה חברתית לצמצום פערים ופרויקט ״יוצרות מציאות״</li></ul></div>
     </div>
     <div class="panel" role="tabpanel" id="panel-youth" aria-labelledby="tab-youth" data-panel="youth" hidden>
       <div><p class="fit-m"><b>מתאים ל:</b> מחלקות קידום נוער, פנימיות, כפרי נוער, מרכזי צעירים ותוכניות העצמה</p><h3>נקודת הפתיחה שלך היא לא נקודת הסיום שלך</h3>
         <p class="hook">״הם סימנו לי גבולות. אני הפכתי אותם לנקודות זינוק.״</p>
         <p class="from"><b>נושא ההרצאה:</b> <a href="#st-1">ביתר עילית</a> · <a href="#st-1">גיל 11</a> · <a href="#st-3">הגיוס</a> · <a href="#st-2">נערים בסיכוי</a></p>
-        <a class="btn ghost" href="#contact" data-audience="נוער וצעירים">להזמנת ההרצאה לנוער</a></div>
+        <a class="btn" href="#contact" data-audience="נוער וצעירים">להזמנת ההרצאה לנוער</a></div>
       <div><p class="take">הנוער יודע להקשיב כשמדברים בשפה שלו:</p><ul><li>הבחירה בידיים שלך, גם כשהסביבה כבר הדביקה תווית</li><li>לקום ממשבר ולא לוותר</li><li>כלים לעצמאות ולמקצוע</li></ul></div>
     </div>
   </div>
@@ -278,13 +279,8 @@
     </div>
 
     <form class="contact-form" id="contact-form" novalidate>
-      <div class="field"><label for="f-name">שם מלא *</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
-      <div class="field"><label for="f-phone">טלפון *</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" dir="ltr" required></div>
-      <div class="field"><label for="f-org">ארגון / חברה</label><input id="f-org" name="org" type="text" autocomplete="organization"></div>
-      <div class="field"><label for="f-role">תפקיד</label><input id="f-role" name="role" type="text" autocomplete="organization-title"></div>
-      <div class="field full"><label for="f-email">דוא״ל</label><input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" dir="ltr"></div>
       <div class="field full">
-        <span class="field-label" id="f-type-label">מי הקהל?</span>
+        <span class="field-label" id="f-type-label">התאמת הרצאה: מי הקהל?</span>
         <div class="picker" id="f-type" role="radiogroup" aria-labelledby="f-type-label">
           <label><input type="radio" name="type" value="חברות ו-HR"><span>חברות ו-HR</span></label>
           <label><input type="radio" name="type" value="משרד החינוך / בתי ספר / יועצים"><span>משרד החינוך / בתי ספר / יועצים</span></label>
@@ -295,6 +291,11 @@
           <label><input type="radio" name="type" value="אחר"><span>אחר</span></label>
         </div>
       </div>
+      <div class="field"><label for="f-name">שם מלא *</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="f-phone">טלפון *</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" dir="ltr" required></div>
+      <div class="field"><label for="f-org">ארגון / חברה</label><input id="f-org" name="org" type="text" autocomplete="organization"></div>
+      <div class="field"><label for="f-role">תפקיד</label><input id="f-role" name="role" type="text" autocomplete="organization-title"></div>
+      <div class="field full"><label for="f-email">דוא״ל</label><input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" dir="ltr"></div>
       <div class="field"><label for="f-size">מספר משתתפים משוער</label><input id="f-size" name="size" type="text" inputmode="numeric"></div>
       <div class="field"><label for="f-date">מועד מבוקש</label><input id="f-date" name="date" type="text" placeholder="לדוגמה: אמצע מרץ"></div>
       <div class="field full"><label for="f-msg">ספרו לנו בקצרה</label><textarea id="f-msg" name="message" rows="3"></textarea></div>
@@ -328,6 +329,6 @@
 
 <a href="#contact" class="sticky-cta">להזמנת הרצאה / שיתוף פעולה</a>
 
-<script src="main.js?v=20261125f"></script>
+<script src="main.js?v=20261125g"></script>
 </body>
 </html>
