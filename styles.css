@@ -93,7 +93,16 @@ h1, h2, h3 { margin: 0; }
 /* ---------- intro (first text after the hero) ---------- */
 .intro { padding-top: 64px; display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); gap: 56px; align-items: stretch; }
 .intro-text { display: flex; flex-direction: column; }
-.intro-text .intro-quote { flex: 1; }
+.intro-line { flex: 1; display: flex; flex-direction: column; margin-top: 28px; padding-inline-start: 22px; border-inline-start: 3px solid var(--accent); }
+.intro-line .intro-quote { margin: 0 0 36px; padding: 0; border: 0; }
+/* the lecture, in short, right at the start */
+.intro-lec { margin-top: auto; padding: 26px 28px 28px; background: var(--bg2); border-top: 3px solid var(--accent); }
+.il-k { margin: 0 0 8px; font: 700 18px/1.4 var(--body); letter-spacing: .04em; color: var(--accent); }
+.il-h { margin: 0 0 10px; font: 700 clamp(40px, 3.8vw, 56px)/.95 var(--disp); color: var(--text); }
+.il-s { margin: 0 0 20px; font-size: clamp(17px, 1.4vw, 20px); line-height: 1.5; color: #d6dde3; }
+.il-aud { display: flex; flex-wrap: wrap; gap: 8px; }
+.il-aud a { font: 700 16px/1.2 var(--body); color: var(--text); text-decoration: none; border: 1px solid rgba(185, 204, 221, .45); padding: 11px 15px; transition: background-color .2s, color .2s, border-color .2s; }
+.il-aud a:hover { background: var(--text); color: var(--bg); border-color: var(--text); }
 
 /* intro slideshow: slanted wipe + slow push, progress bars */
 .slideshow { position: relative; }
@@ -341,5 +350,7 @@ h1, h2, h3 { margin: 0; }
   .fit-m b { color: var(--accent); }
   .panel .btn { width: 100%; white-space: normal; text-align: center; }
   .contact-form { grid-template-columns: 1fr; }
+  .intro-lec { padding: 22px 18px 22px; }
+  .il-aud a { flex: 1 1 calc(50% - 4px); text-align: center; padding: 12px 8px; }
   .actions .btn { flex: 1 1 100%; }
 }
